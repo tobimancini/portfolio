@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.mainContainer {
+    position: relative;
+    margin-top: 10vh;
+    height: 90vh;
+    align-self: center;
+    width: 77%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 800ms;
+    animation-name: txtIn;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.welcomeCont{
+    height: 100%;
+    width: 25%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcomeTxt{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 19%;
+    width: 100%;
+    font-size: 160px;
+}
+
+.seven{
+    animation-delay: 1.5s;
+}
+
+.eLetter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    width: auto;
+    font-size: 280px;
+    transform: scale(2.9, 1.2);
+}
+
+.hugeI{
+    width: 20%;
+    font-size: 720px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateY(-18px);
+}
+
+.amContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.amTxt{
+    width: auto;
+    font-size: 500px;
+    font-weight: 100;
+    height: 500px;
+    transform: scale(0.45, 1.1) translateY(-107px);     
+}
+
+.scrollTxt{
+    font-size: 20px;
+    transform: translateY(-28px);
+    color: rgb(102, 99, 99);
+}
+
+.whoContainer{
+    width: 95%;
+    height: 90%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rightTxt{
+    margin-left: 80px;
+    font-size: 60px;
+    width: 430px;
+    height: 70px;
+}
+
+.developerPng{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    height: 500px;
+    width: auto;
+    cursor:auto
+}
+
+@keyframes textPop {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

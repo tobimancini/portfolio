@@ -1,0 +1,98 @@
+.pelotaVioleta {
+    position: absolute;
+    height: 400px;
+    width: 150%;
+    background-color: rgba(172, 66, 222, 0.84);
+    border-radius: 50%;
+    top: -16%;
+    left: -100px;
+    z-index: -3;
+    animation-name: violeta;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgba(0, 0, 0, 0.23) 0px 1px 2px;
+  }
+  
+  .pelotaPurpura {
+    position: absolute;
+    height: 400px;
+    width: 150%;
+    background-color: rgba(71, 19, 95, 0.84);
+    border-radius: 50%;
+    top: -16%;
+    left: 86px;
+    z-index: -2;
+    animation-name: purpura;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgba(0, 0, 0, 0.23) 0px 1px 2px;
+  }
+
+  .pelotaPurpura.abajo{
+    top:auto;
+    left: auto;
+    bottom: -17%;
+    right: 86px;
+  }
+  
+  .pelotaVioleta.abajo {
+    bottom: -17%;
+    right: -100px;
+    top: auto;
+    left: auto;
+  }
+  
+  .pelotaLila {
+    position: absolute;
+    height: 400px;
+    width: 150%;
+    background-color: rgb(234, 246, 179);
+    border-radius: 50%;
+    top: -16%;
+    right: -350px;
+    z-index: -4;
+    animation-name: lila;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgba(0, 0, 0, 0.23) 0px 1px 2px;
+  }
+  
+  .pelotaLila.abajo {
+    bottom: -17%;
+    left: -350px;
+    top: auto;
+    right: auto;
+  }
+
+  @keyframes violeta {
+    from {
+      background-color: rgb(166, 78, 210);
+    }
+  
+    to {
+      background-color: rgba(158, 36, 215, 0.943);
+    }
+  }
+  
+  @keyframes lila {
+    from {
+      background-color: rgba(234, 246, 179, 0.853);
+    }
+  
+    to {
+      background-color: rgba(226, 247, 134, 0.828);
+    }
+  }
+  
+  @keyframes purpura {
+    from {
+      background-color: rgba(71, 19, 95, 0.897);
+    }
+  
+    to {
+      background-color: rgba(173, 66, 222, 0.859);
+    }
+  }

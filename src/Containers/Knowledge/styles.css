@@ -1,0 +1,215 @@
+.knowledge{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 150px 0px;
+}
+
+.knowledge h2{
+    align-self: flex-end;
+    margin-right: 50px;
+    font-size: 80px;
+}
+
+.courses{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    margin:23px 0px;
+}
+
+.course{
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    background-color: rgba(172, 66, 222);
+    border: solid 3px rgba(172, 66, 222);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.html.animate{
+    animation-name: courseEnter;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.js.animate{
+    animation-name: courseEnter;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.react.animate{
+    animation-name: courseEnter;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+.selected{
+    background-color: rgb(234, 246, 179);
+    border: solid 3px rgb(234, 246, 179);
+    color: #000;
+    font-size: 22px;
+}
+
+.course:hover{
+    border-bottom: solid 3px #fff;
+}
+
+.infoContainer{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.infoContainer.animate{
+    animation-name: infoAnimate;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.info{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    padding: 0px 0px 0px 35px;
+}
+
+.info h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 50px 0 20px 0;
+    color: #fff;
+}
+
+.info p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.certificate{
+    position: relative;
+    height: 100%;
+    width: 34%;
+    border-radius: 5px;
+}
+
+.bgYellow{
+    height: 540px;
+    width: 100%;
+    background-color: rgb(234, 246, 179);
+    position: absolute;
+    top: 195px;
+    z-index: -6;
+    border-top: solid 1px rgba(89, 84, 10, 0.114);
+}
+
+.bgKnowledge{
+    height: 540px;
+    width: 100%;
+    background-color: rgba(71, 19, 95, 0.897);;
+    position: absolute;
+    border-top-right-radius: 100px;
+    top: 195px;
+    z-index: -5;
+    border-bottom: solid 7px rgb(234, 246, 179);
+}
+
+.styleContainer{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.styleElement{
+    position: absolute;
+    height: 1300px;
+    width: 1300px;
+    top: -300px;
+    left: -35%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.134);
+}
+
+.signo1{
+    position: absolute;
+    top: 435px;
+    left: 15px;
+    height: 100px;
+    width: 90px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 100ms ease-in-out;
+}
+
+.signo1:hover{
+    transform: scale(1.05);
+}
+
+.signo2{
+    position: absolute;
+    top: 435px;
+    right: 15px;
+    height: 100px;
+    left: auto;
+    width: 90px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 100ms ease-in-out;
+}
+
+.signo2:hover{
+    transform: scale(1.05);
+}
+
+@keyframes courseEnter {
+    from{
+        opacity: 0;
+        transform: translateX(-1000px) rotate(-540deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+@keyframes infoAnimate {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+    }
+}

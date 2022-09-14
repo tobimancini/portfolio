@@ -1,0 +1,15 @@
+@import url(//db.onlinewebfonts.com/c/180ca1285125dca23ad9e2112675649c?family=Neuzeit+Grotesk);
+
+.App {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(244, 244, 244, 0);
+  overflow: hidden;
+  font-family: "Neuzeit Grotesk";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
