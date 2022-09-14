@@ -21,4 +21,10 @@
 
 .nav-link{
     color: rgb(255, 255, 255) !important;
+    transition: all 250ms ease-in-out !important;
+}
+
+.nav-link:hover{
+    color: rgb(234, 246, 179) !important;
+    text-shadow: #2E2B32 1px 1px, #2E2B32 0px 0px, #2E2B32 0.5px 0.5px, #2E2B32 1.5px 1.5px;
 }

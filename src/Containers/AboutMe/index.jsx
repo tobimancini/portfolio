@@ -30,7 +30,7 @@ const AboutMe = () => {
     }, [animate, animateDisplay]);
 
     return (
-        <div ref={aboutMeRef} className='aboutMe'>
+        <div id='aboutMe' ref={aboutMeRef} className='aboutMe'>
             <div className={animate === 0 ? 'aboutTitle' : animate === 1 ? 'aboutTitle animate' : 'aboutTitle animateBack'}>
                 <h2>About ME</h2>
                 <span className={animate === 0 ? 'spanTitle' : animate === 1 ? 'spanTitle animate' : 'spanTitle animateBack'}></span>

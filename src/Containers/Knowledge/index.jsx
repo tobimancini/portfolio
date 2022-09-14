@@ -59,8 +59,8 @@ const Knowledge = () => {
 
 
     return (
-        <div ref={knowledgeRef} className='knowledge'>
-            <h2>Education</h2>
+        <div id='education' ref={knowledgeRef} className='knowledge'>
+            <h2 className='knowledgeTitle'>Education</h2>
             <div className='courses'>
                 <div className={knowledge==='HTML-CSS'&&animate===1? 'course html animate selected':animate===1?'course html animate':'course html'} 
                 onClick={() => setKnowledge('HTML-CSS')}>HTML-CSS</div>

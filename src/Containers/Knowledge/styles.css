@@ -5,14 +5,17 @@
     height: auto;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
     width: 100%;
-    margin: 150px 0px;
+    margin: 200px 0px 200px 0px;
 }
 
-.knowledge h2{
+.knowledgeTitle{
     align-self: flex-end;
     margin-right: 50px;
     font-size: 80px;
+    border-bottom: solid 1px #000;
+    text-shadow: #524a5b 1px 1px, #5f5a67 0px 0px, #c0b9c7 2px 2px, #ffffff 4px 4px;
 }
 
 .courses{
@@ -21,7 +24,7 @@
     justify-content: space-around;
     align-items: center;
     width: 700px;
-    margin:23px 0px;
+    margin-bottom: 25px;
 }
 
 .course{
@@ -110,10 +113,11 @@
     font-weight: 600;
     margin: 50px 0 20px 0;
     color: #fff;
+    align-self: flex-end;
 }
 
 .info p{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #fff;
@@ -131,7 +135,7 @@
     width: 100%;
     background-color: rgb(234, 246, 179);
     position: absolute;
-    top: 195px;
+    top: 287px;
     z-index: -6;
     border-top: solid 1px rgba(89, 84, 10, 0.114);
 }
@@ -142,7 +146,7 @@
     background-color: rgba(71, 19, 95, 0.897);;
     position: absolute;
     border-top-right-radius: 100px;
-    top: 195px;
+    top: 293px;
     z-index: -5;
     border-bottom: solid 7px rgb(234, 246, 179);
 }

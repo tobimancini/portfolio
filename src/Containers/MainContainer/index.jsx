@@ -44,7 +44,7 @@ const MainContainer = () => {
             </div>
             <div className='whoContainer'>
                 <div className="type-wrap rightTxt">
-                    <span style={{ whiteSpace: 'pre' }} ref={el} />
+                    <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
                 </div>
                 <img className='developerPng six' src="./developer.png" alt="developer" />
             </div>
