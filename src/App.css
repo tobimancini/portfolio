@@ -1,11 +1,6 @@
-@font-face {font-family: "Neuzeit Grotesk";
-  src: url("http://db.onlinewebfonts.com/t/180ca1285125dca23ad9e2112675649c.eot"); /* IE9*/
-  src: url("http://db.onlinewebfonts.com/t/180ca1285125dca23ad9e2112675649c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("http://db.onlinewebfonts.com/t/180ca1285125dca23ad9e2112675649c.woff2") format("woff2"), /* chrome firefox */
-  url("http://db.onlinewebfonts.com/t/180ca1285125dca23ad9e2112675649c.woff") format("woff"), /* chrome firefox */
-  url("http://db.onlinewebfonts.com/t/180ca1285125dca23ad9e2112675649c.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-  url("http://db.onlinewebfonts.com/t/180ca1285125dca23ad9e2112675649c.svg#Neuzeit Grotesk") format("svg"); /* iOS 4.1- */
-}
+/* @import url("https://db.onlinewebfonts.com/c/180ca1285125dca23ad9e2112675649c?family=Neuzeit+Grotesk");
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&display=swap');
 
 .App {
   position: relative;
@@ -14,7 +9,8 @@
   width: 100%;
   background-color: rgba(244, 244, 244, 0);
   overflow: hidden;
-  font-family: "Neuzeit Grotesk";
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: center;
