@@ -22,6 +22,16 @@ const MyProjects = () => {
 
     }, [animate]);
 
+    const animateInfo = ()=>{
+        const info = document.querySelector('.project');
+        info.classList.add('animate')
+    }
+
+    const desanimateInfo = () =>{
+        const info = document.querySelector();
+        info.classList.remove('animate')
+    }
+
     return (
         <div ref={projectsRef} id='myProjects' className='myProjects'>
             <div className='projectsTitle'>
@@ -30,7 +40,7 @@ const MyProjects = () => {
             </div>
             <div className='projects'>
                 <span className={animate === false ? 'line racoon' : 'line racoon animate'}></span>
-                <div className={animate === false ?'project racoon':'project racoon animate'}>
+                <div className={animate === false ?'project racoon':'project racoon animate'} >
                     <div className='projectInfo'>
                         <h3>Racoon</h3>
                         <p>This site was created to simulate a real e-commerce. It was developed with ReactJs, and it was my final project for ReactJs's course in Coderhouse.</p>
@@ -40,7 +50,7 @@ const MyProjects = () => {
                         <img src="./racoonMarket2.png" alt="racoon" />
                     </span>
                 </div>
-                <div className={animate === false ?'project aq':'project aq animate'}>
+                <div className={animate === false ?'project aq':'project aq animate'} >
                     <span className='projectImg aq'>
                         <img src="./adivina-quien.png" alt="aq" />
                     </span>
