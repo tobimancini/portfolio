@@ -1,7 +1,5 @@
 import './App.css';
 import MainContainer from './Containers/MainContainer';
-import BackgroundEx from './Components/BackgroundEx';
-import PurpleCircles from './Components/PurpleCircles';
 import AboutMe from './Containers/AboutMe';
 import Knowledge from './Containers/Knowledge';
 import MyProjects from './Containers/MyProjects';
@@ -17,8 +15,6 @@ function App() {
       <AboutMe/>
       <Knowledge/>
       <MyProjects/>
-      {/* <BackgroundEx />
-      <PurpleCircles/> */}
     </div>
   );
 }

@@ -9,32 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MyNavbar = () => {
 
-
-  // const [navColor, setNavColor] = useState("white");
-  // const [animateDisplay, setAnimateDisplay] = useState(false);
-  // const navRef = useRef();
-
-  // useEffect(() => {
-  //   const currentRef = navRef.current;
-  //   const handleColor = () => {
-  //     const { y } = currentRef.getBoundingClientRect();
-  //     console.log(y);
-  //     // if (y <= 600) {
-  //     //   setNavColor(1);
-  //     //   setAnimateDisplay(true);
-  //     // }
-  //     // if (animateDisplay === true && y >= 600) {
-  //     //   setNavColor(2);
-  //     // }
-  //   }
-  //   window.addEventListener('scroll', () => handleColor())
-
-  //   return () => {
-  //     window.removeEventListener('scroll', () => handleColor())
-  //   }
-
-  // }, [navColor, animateDisplay]);
-
   return (
     <Navbar collapseOnSelect expand="lg">
       <Container>
