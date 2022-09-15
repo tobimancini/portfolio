@@ -14,27 +14,24 @@
     position: relative;
     height: 100%;
     width: 40%;
-    /* background-color: rgb(40, 210, 148); */
     color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border-radius: 3px;
-    /* border-top-right-radius: 260px;
-    border-bottom-right-radius: 260px; */
     transform: scaleX(1.1) translateX(-1000px);
     text-shadow: #524a5b 1px 1px, #5f5a67 0px 0px, #c0b9c7 2px 2px, #ffffff 4px 4px;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
     z-index: 2;
 }
 
-.aboutTitle h2{
-    font-size: 70px;
+.typedContain{
+    font-size: 60px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 2px;
     background-color: #ffffff;
+    width: 310px;
 }
 
 .aboutTitle.animate {

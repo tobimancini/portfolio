@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './styles.css';
+import Typed from 'typed.js';
 
 const Knowledge = () => {
 
@@ -34,9 +35,9 @@ const Knowledge = () => {
     const [visible, setVisible] = useState(false);
     const knowledgeRef = useRef();
 
-    useEffect(()=>{
+    useEffect(() => {
         const currentRef = knowledgeRef.current;
-        const handleAnimate = ()=>{
+        const handleAnimate = () => {
             const { y } = currentRef.getBoundingClientRect();
             const html = document.querySelector('.html');
             const js = document.querySelector('.js');
@@ -49,30 +50,56 @@ const Knowledge = () => {
                 setAnimate(1);
             }
         }
-        window.addEventListener('scroll', ()=>handleAnimate())
+        window.addEventListener('scroll', () => handleAnimate())
 
-        return()=>{
-            window.removeEventListener('scroll', ()=>handleAnimate())
+        return () => {
+            window.removeEventListener('scroll', () => handleAnimate())
         }
 
     }, [animate]);
 
 
+    const el = useRef(null);
+    const typed = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            strings: [
+                'Education',
+                'Knowledge'
+            ],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+            backDelay: 1500,
+            startDelay: 800
+        };
+
+        typed.current = new Typed(el.current, options);
+
+        return () => {
+            typed.current.destroy();
+        }
+    }, []);
+
+
     return (
         <div id='education' ref={knowledgeRef} className='knowledge'>
-            <h2 className='knowledgeTitle'>Education</h2>
+            <div className="type-wrap knowledgeTitle">
+                <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
+            </div>
             <div className='courses'>
-                <div className={knowledge==='HTML-CSS'&&animate===1? 'course html animate selected':animate===1?'course html animate':'course html'} 
-                onClick={() => setKnowledge('HTML-CSS')}>HTML-CSS</div>
-                <div className={knowledge === 'Javascript'&&animate===1?'course js animate selected':animate===1?'course js animate':'course js'} 
-                onClick={() => setKnowledge('Javascript')}>Javascript</div>
-                <div className={knowledge === 'React JS'&&animate===1?'course react animate selected':animate===1?'course react animate':'course react'} 
-                onClick={() => setKnowledge('React JS')}>React JS</div>
+                <div className={knowledge === 'HTML-CSS' && animate === 1 ? 'course html animate selected' : animate === 1 ? 'course html animate' : 'course html'}
+                    onClick={() => setKnowledge('HTML-CSS')}>HTML-CSS</div>
+                <div className={knowledge === 'Javascript' && animate === 1 ? 'course js animate selected' : animate === 1 ? 'course js animate' : 'course js'}
+                    onClick={() => setKnowledge('Javascript')}>Javascript</div>
+                <div className={knowledge === 'React JS' && animate === 1 ? 'course react animate selected' : animate === 1 ? 'course react animate' : 'course react'}
+                    onClick={() => setKnowledge('React JS')}>React JS</div>
             </div>
             <div className='infoContainer'>
                 {/* <img className='certificate' src={knowledge === 'HTML-CSS' ? './certificadoHTMLCSS.png' : knowledge === 'Javascript' ? "./certificado.jpg" : './certificadoReact.png'}
                     alt="certificado" /> */}
-                    <div className={knowledge === 'HTML-CSS' ? 'certificate html' : knowledge === 'Javascript' ? "certificate js" : 'certificate react'} ></div>
+                <div className={knowledge === 'HTML-CSS' ? 'certificate html' : knowledge === 'Javascript' ? "certificate js" : 'certificate react'} ></div>
                 <div className='info'>
                     <h2>{knowledge}</h2>
                     <p className={knowledge === 'HTML-CSS' ? 'htmlTxt' : knowledge === 'Javascript' ? 'jsTxt' : 'reactTxt'} >

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './styles.css';
+import Typed from 'typed.js';
 
 const AboutMe = () => {
 
@@ -9,30 +10,54 @@ const AboutMe = () => {
     const [animateDisplay, setAnimateDisplay] = useState(false);
     const aboutMeRef = useRef();
 
-    useEffect(()=>{
+    useEffect(() => {
         const currentRef = aboutMeRef.current;
-        const handleAnimate = ()=>{
+        const handleAnimate = () => {
             const { y } = currentRef.getBoundingClientRect();
             if (y <= 600) {
                 setAnimate(1);
                 setAnimateDisplay(true);
             }
-            if(animateDisplay === true && y >= 600){
+            if (animateDisplay === true && y >= 600) {
                 setAnimate(2);
             }
         }
-        window.addEventListener('scroll', ()=>handleAnimate())
+        window.addEventListener('scroll', () => handleAnimate())
 
-        return()=>{
-            window.removeEventListener('scroll', ()=>handleAnimate())
+        return () => {
+            window.removeEventListener('scroll', () => handleAnimate())
         }
 
     }, [animate, animateDisplay]);
 
+    const el = useRef(null);
+    const typed = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            strings: [
+                'About ME'
+            ],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+            backDelay: 1500,
+            startDelay: 800
+        };
+
+        typed.current = new Typed(el.current, options);
+
+        return () => {
+            typed.current.destroy();
+        }
+    }, []);
+
     return (
         <div id='aboutMe' ref={aboutMeRef} className='aboutMe'>
             <div className={animate === 0 ? 'aboutTitle' : animate === 1 ? 'aboutTitle animate' : 'aboutTitle animateBack'}>
-                <h2>About ME</h2>
+                <div className="type-wrap typedContain">
+                    <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
+                </div>
                 <span className={animate === 0 ? 'spanTitle' : animate === 1 ? 'spanTitle animate' : 'spanTitle animateBack'}></span>
             </div>
             <div className={animate === 0 ? 'aboutList' : animate === 1 ? 'aboutList animate' : 'aboutList animateBack'}>
