@@ -70,8 +70,9 @@ const Knowledge = () => {
                 onClick={() => setKnowledge('React JS')}>React JS</div>
             </div>
             <div className='infoContainer'>
-                <img className='certificate' src={knowledge === 'HTML-CSS' ? './certificadoHTMLCSS.png' : knowledge === 'Javascript' ? "./certificado.jpg" : './certificadoReact.png'}
-                    alt="certificado" />
+                {/* <img className='certificate' src={knowledge === 'HTML-CSS' ? './certificadoHTMLCSS.png' : knowledge === 'Javascript' ? "./certificado.jpg" : './certificadoReact.png'}
+                    alt="certificado" /> */}
+                    <div className={knowledge === 'HTML-CSS' ? 'certificate html' : knowledge === 'Javascript' ? "certificate js" : 'certificate react'} ></div>
                 <div className='info'>
                     <h2>{knowledge}</h2>
                     <p className={knowledge === 'HTML-CSS' ? 'htmlTxt' : knowledge === 'Javascript' ? 'jsTxt' : 'reactTxt'} >

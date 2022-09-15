@@ -14,7 +14,7 @@
     position: relative;
     height: 100%;
     width: 40%;
-    background-color: rgb(218, 239, 120);
+    background-color: rgb(40, 210, 148);
     color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
@@ -54,7 +54,7 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-color: rgb(234, 246, 179);
+    background-color: #76d5c6;
     top: 20px;
     border-top-right-radius: 260px;
     border-bottom-right-radius: 260px;

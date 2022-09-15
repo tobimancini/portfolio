@@ -19,7 +19,8 @@ const MainContainer = () => {
             typeSpeed: 50,
             backSpeed: 50,
             loop:true,
-            backDelay: 1500
+            backDelay: 1500,
+            startDelay: 800
         };
 
         typed.current = new Typed(el.current, options);

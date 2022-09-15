@@ -41,6 +41,7 @@
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     transition: all 200ms ease-in-out;
 }
 
@@ -69,8 +70,8 @@
 }
 
 .selected{
-    background-color: rgb(234, 246, 179);
-    border: solid 3px rgb(234, 246, 179);
+    background-color: #76d5c6;
+    border: solid 3px #76d5c6;
     color: #000;
     font-size: 22px;
 }
@@ -80,7 +81,7 @@
 }
 
 .infoContainer{
-    height: 400px;
+    height: 450px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -117,6 +118,7 @@
 }
 
 .info p{
+    margin-top: 40px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -127,13 +129,30 @@
     position: relative;
     height: 100%;
     width: 34%;
-    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 110%;
+    border-top-right-radius: 90px;
+    border-bottom: solid 5px #76d5c6;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.certificate.html{
+    background-image: url(./../../../public/certificadoHTMLCSS.png);
+}
+
+.certificate.js{
+    background-image: url(./../../../public/certificado.jpg);
+}
+
+.certificate.react{
+    background-image: url(./../../../public/certificadoReact.png);
 }
 
 .bgYellow{
     height: 540px;
     width: 100%;
-    background-color: rgb(234, 246, 179);
+    background-color: #76d5c6;
     position: absolute;
     top: 287px;
     z-index: -6;
@@ -148,7 +167,7 @@
     border-top-right-radius: 100px;
     top: 293px;
     z-index: -5;
-    border-bottom: solid 7px rgb(234, 246, 179);
+    border-bottom: solid 7px #76d5c6;
 }
 
 .styleContainer{
@@ -170,7 +189,7 @@
 
 .signo1{
     position: absolute;
-    top: 435px;
+    top: 490px;
     left: 15px;
     height: 100px;
     width: 90px;
@@ -184,7 +203,7 @@
 
 .signo2{
     position: absolute;
-    top: 435px;
+    top: 490px;
     right: 15px;
     height: 100px;
     left: auto;

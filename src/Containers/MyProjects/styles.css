@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 100px 0px;
 }
 
 .projectsTitle {
@@ -14,6 +15,7 @@
     align-items: center;
     align-self: flex-start;
     margin-left: 50px;
+    margin-bottom: 350px;
 }
 
 .projectsTitle h2 {
@@ -32,81 +34,226 @@
 }
 
 .projects {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin-top: 50px;
     width: 100%;
 }
 
 .project {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 350px;
-    width: 302px !important;
-    transition: all 200ms ease-in-out;
+    height: 280px;
+    width: auto;
+    transition: all 400ms ease-in-out;
     overflow: hidden;
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.project.animate{
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 .project.racoon{
     background-image: url(../../../public/racoonW.png);
-    border-top-right-radius: 100px;
-    margin-right: 10px;
+    border-top-left-radius: 80px;
+    justify-content: flex-end;
+    left: 33%;
+    right: 49.5%;
+    border-right: solid 1px #76d5c6;
+    transform: translateX(-1000px);
 }
 
-.project.aq{
+.project.aq {
     background-image: url(../../../public/aq.png);
-    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 80px;
     margin-left: 10px;
+    justify-content: flex-start;
+    left: 49.5%;
+    right: 33%;
+    border-left: solid 1px #76d5c6;   
+    transform: translateX(1000px);
+}
+
+.aq.animate{
+    animation-name: aqEnter;
+}
+
+.racoon.animate{
+    animation-name: racoonEnter;
 }
 
 .project:hover {
     border-radius: 0;
+    background-color: #ad42de;
+    background-image: none;
 }
 
 .projectImg {
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 350px;
     transition: all 400ms ease-in-out;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-top: solid 5px #000;
-    border-bottom: solid 5px #000;
     opacity: 0;
 }
 
-.projectImg:hover {
-    opacity: 1;
+.projectImg img{
+    cursor: auto;
 }
 
-.projectImg.racoon{
-    background-image: url(../../../public/racoonMarket2.png);
+.project:hover .projectImg {
+    animation-name: imgAppear;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
-.projectImg.aq{
-    background-image: url(../../../public/adivina-quien.png);
+.project.racoon:hover {
+    left: 0;
+    right: 49.5%;
+    width: auto;
+
+}
+
+.project.aq:hover {
+    right: 0;
+    left: 49.5%;
+    width: auto;
 }
 
 .projectInfo{
-    width: 450px;
-    height: 350px;
+    position: relative;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
 }
 
-.projectInfo.racoon{
-    border-bottom: solid 5px rgb(234, 246, 179);
+.projectInfo h3{
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
-.projectInfo.aq{
-    border-top: solid 5px rgb(234, 246, 179);
+.projectInfo p{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.projectInfo a{
+    text-decoration: none !important;
+    color: #ffffff !important;
+    height: 30px;
+    font-size: 25px;
+    align-self: flex-end;
+    margin-top: 30px;
+    transition: all 200ms ease-in-out;
+}
+
+.projectInfo a:hover{
+    transform: scale(1.05);
+}
+
+.project:hover .projectInfo{
+    opacity: 1;
+}
+
+.line.racoon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    border-top-right-radius: 80px;
+    border-bottom: solid 25px #ad42de;
+    border-top: solid 5px #76d5c6;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    transform: translateX(-1000px);
+}
+
+.line.aq {
+    position: absolute;
+    bottom: 250px;
+    right: 0;
+    width: 40%;
+    border-bottom-left-radius: 80px;
+    border-top: solid 25px #ad42de;
+    border-bottom: solid 5px #76d5c6;
+    z-index: -1;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    transform: translateX(1000px);
+}
+
+.line.racoon.animate{
+    animation-name: racoonEnter;
+}
+
+.line.aq.animate{
+    animation-name: aqEnter;
+}
+
+.racoon img {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    transform: translateX(55px);
+}
+
+.aq img {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 100%;
+}
+
+@keyframes imgAppear {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes racoonEnter {
+    from{
+        transform: translateX(-1000px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes aqEnter {
+    from{
+        transform: translateX(1000px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
