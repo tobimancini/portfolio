@@ -32,7 +32,7 @@ const MyProjects = () => {
                 <span className={animate === false ? 'line racoon' : 'line racoon animate'}></span>
                 <div className={animate === false ?'project racoon':'project racoon animate'}>
                     <div className='projectInfo'>
-                        <h3>Racoon e-commerce</h3>
+                        <h3>Racoon</h3>
                         <p>This site was created to simulate a real e-commerce. It was developed with ReactJs, and it was my final project for ReactJs's course in Coderhouse.</p>
                         <a className='visit' href='https://tobimancini.github.io/proyecto-react/'  target="_blank">MAKE A VISIT</a>
                     </div>

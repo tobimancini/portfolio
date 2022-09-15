@@ -5,8 +5,6 @@ import './styles.css'
 
 const MainContainer = () => {
 
-    const [typing, setTyping] = useState(false);
-
     const el = useRef(null);
     const typed = useRef(null);
 
