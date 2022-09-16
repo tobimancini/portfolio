@@ -33,7 +33,7 @@ const ContactForm = () => {
     }, []);
 
     return (
-        <div className='contactContainer'>
+        <div id='contactForm' className='contactContainer'>
             <div className='contactTitleContain'>
                 <div className='contactAvatar'></div>
                 <div className="type-wrap contactTitle">

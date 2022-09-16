@@ -58,8 +58,6 @@
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 50%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .project.animate{
@@ -72,18 +70,22 @@
     background-image: url(../../../public/racoonW.png);
     border-top-left-radius: 80px;
     justify-content: flex-end;
+    background-size: 110px auto;
     left: 33%;
     right: 49.6%;
+    z-index: 1;
     transform: translateX(-1000px);
 }
 
 .project.aq {
     background-image: url(../../../public/aq.png);
+    background-size: 110px auto;
     border-bottom-right-radius: 80px;
     margin-left: 10px;
     justify-content: flex-start;
     left: 49.6%;
     right: 33%;   
+    z-index: 1;
     transform: translateX(1000px);
 }
 
@@ -97,6 +99,11 @@
 
 .project:hover {
     border-radius: 0;
+    z-index: 2;
+}
+
+.project.aq:hover {
+    background-position: 30%;
 }
 
 .projectImg {
@@ -135,7 +142,7 @@
 }
 
 .projectInfo{
-    position: relative;
+    position: absolute;
     width: 300px;
     height: 100%;
     display: flex;
@@ -143,9 +150,20 @@
     justify-content: space-around;
     align-items: center;
     opacity: 0;
-    transition: all 10ms ease-in-out;
-    transform: scale(0.01);
+    transition: all 300ms ease-in-out;
 }
+
+.racoon .projectInfo{
+    /* transform: scale(0) translateX(-200px); */
+    right: 400px;
+}
+
+.aq .projectInfo{
+    /* transform: scale(0) translateX(200px); */
+    left: 400px;
+}
+
+
 
 .projectInfo h3{
     z-index: 1;
@@ -172,7 +190,7 @@
     font-size: 25px;
     margin-top: 20px;
     font-weight: 900;
-    transition: all 150ms ease-in-out;
+    transition: all 150ms ease-out;
 }
 
 .projectInfo a:hover{
@@ -181,7 +199,7 @@
 
 .project:hover .projectInfo{
     opacity: 1;
-    transform: scale(0.9);
+    /* transform: scale(1) translate(0px); */
 }
 
 .line.racoon {
@@ -244,7 +262,8 @@
     height: 100%;
     width: 2px;
     background-color: #ffffff;
-    transition: all 600ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    transition-delay: 100ms;
 }
 
 .project.racoon:hover .projectSpan.racoon{

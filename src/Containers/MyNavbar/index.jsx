@@ -19,7 +19,8 @@ const MyNavbar = () => {
             <Nav.Link href="#aboutMe">About Me</Nav.Link>
             <Nav.Link href="#education">Education</Nav.Link>
             <Nav.Link href="#myProjects">My Projects</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <Nav.Link href="#contactForm">Contact</Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -29,7 +30,7 @@ const MyNavbar = () => {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
