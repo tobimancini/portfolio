@@ -34,8 +34,11 @@ const ContactForm = () => {
 
     return (
         <div className='contactContainer'>
-            <div className="type-wrap contactTitle">
-                <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
+            <div className='contactTitleContain'>
+                <div className='contactAvatar'></div>
+                <div className="type-wrap contactTitle">
+                    <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
+                </div>
             </div>
             <Form className='contactForm' noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">

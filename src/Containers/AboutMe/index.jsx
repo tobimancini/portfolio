@@ -57,6 +57,7 @@ const AboutMe = () => {
                 <p>Fast learner</p>
                 <p>Great team-Work</p>
                 <span className={animate === 0 ? 'spanList' : animate === 1 ? 'spanList animate' : 'spanList animateBack'}></span>
+                <span className='aboutSpanHover'></span>
             </div>
         </div>
     )

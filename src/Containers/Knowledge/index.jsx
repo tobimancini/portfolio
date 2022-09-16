@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './styles.css';
 import typeAnimate from '../../Utils/typeAnimate';
+import { DiCss3, DiHtml5, DiJavascript, DiReact } from 'react-icons/di';
 
 const Knowledge = () => {
 
@@ -13,9 +14,9 @@ const Knowledge = () => {
 
     const changeFw = () => {
         if (knowledge === 'HTML-CSS') {
-            setKnowledge('Javascript')
-        } else if (knowledge === 'Javascript') {
-            setKnowledge('React JS')
+            setKnowledge('JAVASCRIPT')
+        } else if (knowledge === 'JAVASCRIPT') {
+            setKnowledge('REACT JS')
         } else {
             setKnowledge('HTML-CSS')
         }
@@ -23,16 +24,15 @@ const Knowledge = () => {
 
     const changeBw = () => {
         if (knowledge === 'HTML-CSS') {
-            setKnowledge('React JS')
-        } else if (knowledge === 'Javascript') {
+            setKnowledge('REACT JS')
+        } else if (knowledge === 'JAVASCRIPT') {
             setKnowledge('HTML-CSS')
         } else {
-            setKnowledge('Javascript')
+            setKnowledge('JAVASCRIPT')
         }
     }
 
     const [animate, setAnimate] = useState(0);
-    const [visible, setVisible] = useState(false);
     const knowledgeRef = useRef();
 
     useEffect(() => {
@@ -78,20 +78,37 @@ const Knowledge = () => {
             </div>
             <div className='courses'>
                 <div className={knowledge === 'HTML-CSS' && animate === 1 ? 'course html animate selected' : animate === 1 ? 'course html animate' : 'course html'}
-                    onClick={() => setKnowledge('HTML-CSS')}>HTML-CSS</div>
-                <div className={knowledge === 'Javascript' && animate === 1 ? 'course js animate selected' : animate === 1 ? 'course js animate' : 'course js'}
-                    onClick={() => setKnowledge('Javascript')}>Javascript</div>
-                <div className={knowledge === 'React JS' && animate === 1 ? 'course react animate selected' : animate === 1 ? 'course react animate' : 'course react'}
-                    onClick={() => setKnowledge('React JS')}>React JS</div>
+                    onClick={() => setKnowledge('HTML-CSS')}>
+                    <div className='courseContain'>
+                        <DiHtml5 className='htmlCss'/>
+                        <DiCss3 className='htmlCss'/>
+                    </div>
+                    <h3>HTML-CSS</h3>
+                    <span className='courseSpan'></span>
+                </div>
+                <div className={knowledge === 'JAVASCRIPT' && animate === 1 ? 'course js animate selected' : animate === 1 ? 'course js animate' : 'course js'}
+                    onClick={() => setKnowledge('JAVASCRIPT')}>
+                    <div className='courseContain'>
+                    <DiJavascript className='jsReact'/>
+                    </div>
+                    <h3>JAVASCRIPT</h3>
+                    <span className='courseSpan'></span>
+                </div>
+                <div className={knowledge === 'REACT JS' && animate === 1 ? 'course react animate selected' : animate === 1 ? 'course react animate' : 'course react'}
+                    onClick={() => setKnowledge('REACT JS')}>
+                    <div className='courseContain'>
+                        <DiReact className='jsReact'/>
+                    </div>
+                    <h3>REACT JS</h3>
+                    <span className='courseSpan'></span>
+                </div>
             </div>
             <div className='infoContainer'>
-                {/* <img className='certificate' src={knowledge === 'HTML-CSS' ? './certificadoHTMLCSS.png' : knowledge === 'Javascript' ? "./certificado.jpg" : './certificadoReact.png'}
-                    alt="certificado" /> */}
-                <div className={knowledge === 'HTML-CSS' ? 'certificate html' : knowledge === 'Javascript' ? "certificate js" : 'certificate react'} ></div>
+                <div className={knowledge === 'HTML-CSS' ? 'certificate html' : knowledge === 'JAVASCRIPT' ? "certificate js" : 'certificate react'} ></div>
                 <div className='info'>
                     <h2>{knowledge}</h2>
-                    <p className={knowledge === 'HTML-CSS' ? 'htmlTxt' : knowledge === 'Javascript' ? 'jsTxt' : 'reactTxt'} >
-                        {knowledge === 'HTML-CSS' ? htmlText : knowledge === 'Javascript' ? jsText : reactText}
+                    <p className={knowledge === 'HTML-CSS' ? 'htmlTxt' : knowledge === 'JAVASCRIPT' ? 'jsTxt' : 'reactTxt'} >
+                        {knowledge === 'HTML-CSS' ? htmlText : knowledge === 'JAVASCRIPT' ? jsText : reactText}
                     </p>
                 </div>
             </div>

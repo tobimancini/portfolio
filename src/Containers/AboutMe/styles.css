@@ -79,6 +79,7 @@
 }
 
 .aboutList {
+    position: relative;
     margin-top: 300px;
     height: 100%;
     width: 60%;
@@ -97,6 +98,11 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     z-index: 1;
     overflow: hidden;
+}
+
+.aboutList p{
+    z-index: 1;
+    transition: all 400ms ease-in-out;
 }
 
 .aboutList.animate {
@@ -136,6 +142,25 @@
     animation-duration: 1.1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.aboutSpanHover{
+    position: absolute;
+    left: -5px;
+    width: 150%;
+    height: 150%;
+    background-color: #fff;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: all 500ms ease-in-out;
+}
+
+.aboutList:hover .aboutSpanHover{
+    transform: translateY(0px);
+}
+
+.aboutList:hover p{
+    color: #000;;
 }
 
 @keyframes aboutTitle {

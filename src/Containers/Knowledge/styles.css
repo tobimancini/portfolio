@@ -34,21 +34,69 @@
 }
 
 .course{
+    position: relative;
     height: 150px;
     width: 150px;
     opacity: 0;
     background-color: rgba(172, 66, 222);
-    border: solid 3px rgba(172, 66, 222);
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     transition: all 200ms ease-in-out;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.courseContain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseContain .htmlCss{
+    font-size: 65px;
+    color: #fff;
+    transition: all 400ms ease-in-out;
+    margin-top: 10px;
+}
+
+.courseContain .jsReact{
+    font-size: 80px;
+    color: #fff;
+    transition: all 400ms ease-in-out;
+}
+
+.course h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 10px;
+    z-index: 1;
+    transition: all 400ms ease-in-out;
+}
+
+.courseSpan{
+    position: absolute;
+    left: -5px;
+    width: 150%;
+    height: 150%;
+    background-color: #fff;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: all 400ms ease-in-out;
+}
+
+.course:hover .courseSpan{
+    transform: translateY(0px);
+}
+
+.course:hover h3,.course:hover .htmlCss,.course:hover .jsReact{
+    color: #000;
 }
 
 .html.animate{
@@ -77,13 +125,7 @@
 
 .selected{
     background-color: #76d5c6;
-    border: solid 3px #76d5c6;
     color: #000;
-    font-size: 22px;
-}
-
-.course:hover{
-    border-bottom: solid 3px #fff;
 }
 
 .infoContainer{

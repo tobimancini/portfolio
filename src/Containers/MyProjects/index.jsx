@@ -55,6 +55,7 @@ const MyProjects = () => {
                     <span className='projectImg racoon'>
                         <img src="./racoonMarket2.png" alt="racoon" />
                     </span>
+                    <span className='projectSpan racoon'></span>
                 </div>
                 <div className={animate === false ? 'project aq' : 'project aq animate'} >
                     <span className='projectImg aq'>
@@ -65,6 +66,7 @@ const MyProjects = () => {
                         <p>This site was created to practice in depth pure Javascript. It consists on a game based on a real board game called Guess Who.</p>
                         <a className='visit' href='https://tobimancini.github.io/adivina-quien/' target="_blank">MAKE A VISIT</a>
                     </div>
+                    <span className='projectSpan aq'></span>
                 </div>
                 <span className={animate === false ? 'line aq' : 'line aq animate'}></span>
             </div>
