@@ -1,31 +1,20 @@
 import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import Typed from 'typed.js';
+import typeAnimate from '../../Utils/typeAnimate';
 import './styles.css'
 
 const MainContainer = () => {
 
     const el = useRef(null);
     const typed = useRef(null);
+    const strings = [
+        'Tobias Mancini',
+        'Frontend Developer'
+    ]
 
     useEffect(() => {
-        const options = {
-            strings: [
-                'Tobias Mancini',
-                'Frontend Developer'
-            ],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop:true,
-            backDelay: 1500,
-            startDelay: 800
-        };
-
-        typed.current = new Typed(el.current, options);
-
-        return () => {
-            typed.current.destroy();
-        }
+        typeAnimate(strings, el, typed);
     }, []);
     
 

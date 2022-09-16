@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './styles.css';
-import Typed from 'typed.js';
+import typeAnimate from '../../Utils/typeAnimate';
 
 const Knowledge = () => {
 
@@ -61,25 +61,13 @@ const Knowledge = () => {
 
     const el = useRef(null);
     const typed = useRef(null);
+    const strings = [
+        'Education',
+        'Knowledge'
+    ]
 
     useEffect(() => {
-        const options = {
-            strings: [
-                'Education',
-                'Knowledge'
-            ],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true,
-            backDelay: 1500,
-            startDelay: 800
-        };
-
-        typed.current = new Typed(el.current, options);
-
-        return () => {
-            typed.current.destroy();
-        }
+        typeAnimate(strings, el, typed);
     }, []);
 
 

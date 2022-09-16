@@ -1,0 +1,63 @@
+.contactContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.contactTitle{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin-right: 50px;
+    font-size: 60px;
+    box-shadow: rgb(151, 215, 218) 1px 1px 4px 2px inset, rgba(255, 255, 255, 0.5) -1px -1px 4px 2px inset;
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin-bottom: 100px;
+}
+
+.contactForm{
+    margin-bottom: 150px;
+}
+
+.contactStyleR{
+    position: absolute;
+    width: 100px;
+    height: 50%;
+    width: 70%;
+    right: 0px;
+    bottom: 0px;
+    background-color: #4c2769;
+    z-index: -3;
+    border-top-left-radius: 380px;
+}
+
+.contactStyleL{
+    position: absolute;
+    height: 75%;
+    width: 44.8%;
+    left: 0px;
+    top: 20px;
+    background-color: #eed9f8;
+    z-index: -2;
+    border-bottom-right-radius: 380px;
+}
+
+.contactStyleB{
+    position: absolute;
+    width: 100px;
+    height: 37%;
+    width: 100%;
+    right: 0px;
+    bottom: 0px;
+    background-color: #4c2769;
+    z-index: -3;
+}
