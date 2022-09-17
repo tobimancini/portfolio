@@ -114,17 +114,18 @@
     align-items: center;
     margin-left: 80px;
     font-size: 60px;
-    width: 600px;
+    width: 450px;
     background-color: #ffffff;
-    border-radius: 2px;
+    border-radius: 1px;
     padding: 5px 10px;
-    box-shadow: rgb(151, 215, 218) 1px 1px 4px 2px inset, rgba(255, 255, 255, 0.5) -1px -1px 4px 2px inset;
+    box-shadow: rgb(165, 134, 169) 0px 0px 4px 1px inset, rgba(255, 255, 255, 0.5) 0px 0px 6px 3px inset;
 }
 
 .typed{
     color: #76d5c6;
     text-shadow: #2E2B32 1px 1px, #2E2B32 0px 0px, #2E2B32 1px 1px, #2E2B32 2px 2px;
-    font-size: 60px;
+    font-size: 40px;
+    font-weight: 800;
 }
 
 .developerPng{

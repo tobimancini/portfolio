@@ -1,32 +1,34 @@
 .contactContainer {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    z-index: 1;
+}
+
+.contactForm{
+    position: relative;
+    padding-bottom: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contactTitleContain{
+    align-self: flex-end;
     height: auto;
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-}
-
-.contactAvatar {
-    position: relative;
-    height: 300px;
-    width: 250px;
-    background-image: url(../../../public/upload.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateY(-60px);
+    margin-right: 200px;
 }
 
 .contactTitle{
@@ -34,50 +36,129 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 450px;
-    margin-right: 50px;
+    width: 350px;
+    margin: 50px;
     font-size: 60px;
-    box-shadow: rgb(151, 215, 218) 1px 1px 4px 2px inset, rgba(255, 255, 255, 0.5) -1px -1px 4px 2px inset;
+    /* box-shadow: rgb(165, 134, 169) 0px 0px 4px 1px inset, rgba(255, 255, 255, 0.5) 0px 0px 6px 3px inset; */
+    box-shadow: rgba(81, 89, 89, 0.549) 0px 0px 4px 2px , rgba(255, 255, 255, 0.5) 0px 0px 3px 1px ;
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 1px;
     background-color: #ffffff;
     margin-bottom: 100px;
 }
 
-.contactForm{
-    margin-bottom: 150px;
+.contactBird{
+    position: absolute;
+    z-index: -1;
+    height: 300px;
+    width: 600px;
+    top: -20px;
+    right: 50px;
+    background-image: url(../../../public/bird.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.contactStyleR{
-    position: absolute;
-    width: 100px;
-    height: 50%;
-    width: 70%;
-    right: 0px;
-    bottom: 0px;
-    background-color: #4c2769;
-    z-index: -3;
-    border-top-left-radius: 380px;
+.inputsContain{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 100px;
 }
 
-.contactStyleL{
-    position: absolute;
-    height: 75%;
-    width: 44.8%;
-    left: 0px;
-    top: 20px;
-    background-color: #eed9f8;
-    z-index: -2;
-    border-bottom-right-radius: 380px;
-}
-
-.contactStyleB{
-    position: absolute;
-    width: 100px;
-    height: 37%;
+.inputStyle{
     width: 100%;
-    right: 0px;
-    bottom: 0px;
+    padding: 0px;
+    border-radius: 1px;
+}
+
+.inputStyle .form-label{
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.inputStyle input{
+    border-radius: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inputStyle textarea{
+    resize: none;
+    border-radius: 1px;
+    height: 90px;
+}
+
+.inputStyle span{
+    border-radius: 1px;
+}
+
+.inputStyle.btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #76d5c6;
+    border: none;
+    font-weight: 800;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 300ms ease-in;
+}
+
+.btn p{
+    margin: 0px;
+    z-index: 1;
+}
+
+.btnSpan{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: all 300ms ease-in;
+}
+
+.inputStyle.btn:hover{
+    background-color: #76d5c6;
+    color: #000;
+}
+
+.inputStyle.btn:hover .btnSpan{
+    transform: translateY(0%);
+}
+
+.formSpan{
+    position: absolute;
+    width: 100%;
+    height: 390px;
     background-color: #4c2769;
-    z-index: -3;
+    z-index: -1;
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+.formSpan.animate{
+    animation-name: formSpan;
+    animation-duration: 1000ms;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    box-shadow: rgb(81, 89, 89) 0px 7px 10px 5px , rgba(0, 0, 0, 0.373) 0px 7px 10px 10px ;
+}
+
+@keyframes formSpan{
+    from{
+        transform: translateY(100%);
+    }
+
+    to{
+        transform: translateY(0%);
+    }
 }

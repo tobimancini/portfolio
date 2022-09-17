@@ -15,12 +15,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 360px;
+    width: 300px;
     margin-right: 50px;
     font-size: 60px;
-    box-shadow: rgb(151, 215, 218) 1px 1px 4px 2px inset, rgba(255, 255, 255, 0.5) -1px -1px 4px 2px inset;
+    box-shadow: rgb(165, 134, 169) 0px 0px 4px 1px inset, rgba(255, 255, 255, 0.5) 0px 0px 6px 3px inset;
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 1px;
     background-color: #ffffff;
 }
 
@@ -88,7 +88,7 @@
     background-color: #fff;
     z-index: -1;
     transform: translateY(100%);
-    transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in;
 }
 
 .course:hover .courseSpan{

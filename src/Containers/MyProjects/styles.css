@@ -20,11 +20,14 @@
 
 .projectsTitle .typedTitle {
     font-size: 60px;
-    box-shadow: rgb(151, 215, 218) 1px 1px 4px 2px inset, rgba(255, 255, 255, 0.5) -1px -1px 4px 2px inset;
+    box-shadow: rgb(165, 134, 169) 0px 0px 4px 1px inset, rgba(255, 255, 255, 0.5) 0px 0px 6px 3px inset;
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
-    width: 360px;
+    width: 300px;
 }
 
 .projectsTitle img {
@@ -154,12 +157,10 @@
 }
 
 .racoon .projectInfo{
-    /* transform: scale(0) translateX(-200px); */
     right: 400px;
 }
 
 .aq .projectInfo{
-    /* transform: scale(0) translateX(200px); */
     left: 400px;
 }
 
@@ -199,7 +200,6 @@
 
 .project:hover .projectInfo{
     opacity: 1;
-    /* transform: scale(1) translate(0px); */
 }
 
 .line.racoon {
@@ -262,7 +262,7 @@
     height: 100%;
     width: 2px;
     background-color: #ffffff;
-    transition: all 400ms ease-in-out;
+    transition: all 400ms ease-out;
     transition-delay: 100ms;
 }
 
