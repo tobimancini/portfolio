@@ -10,12 +10,28 @@
 }
 
 .sectionTitle{
-    color: #eea2ff;
+    color: #c7b9a6;
     font-size: 100px;
     text-shadow: none;
     font-weight: 900;
     -webkit-text-stroke: 1px #fff;
     margin-bottom: 0px;
+}
+
+.aboutMeTitle.animate{
+    color: #c7b9a6;
+    animation-name: titleAnimate;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.aboutMeTitle.notAnimate{
+    color: #eea2ff;
+    animation-name: titleNotAnimate;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 .aboutBody{
@@ -98,7 +114,7 @@
     align-items: flex-end;
     padding-right: 320px;
     background-color: #fff;
-    color: #82735e;
+    color: #534739;
     border-radius: 3px;
     border-bottom-left-radius: 260px;
     border-top-left-radius: 260px;
@@ -167,6 +183,19 @@
 
 .aboutList:hover .aboutSpanHover{
     transform: translateY(0px);
+}
+
+.aboutDoodles{
+    position: absolute;
+    height: 100%;
+    width: 120%;
+    transform: translateX(40%);
+    background-image: url(../../../public/garabatos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-top: solid 2px #eea2ff;
+    border-bottom: solid 2px #eea2ff;
 }
 
 @keyframes aboutTitle {
@@ -262,6 +291,24 @@
     to {
         transform: scaleX(1.1) translateX(1000px);
         opacity: 0;
+    }
+}
+
+@keyframes titleAnimate{
+    from{
+        color: #c7b9a6;
+    }
+    to{
+        color: #eea2ff;
+    }
+}
+
+@keyframes titleNotAnimate{
+    from{
+        color: #eea2ff;
+    }
+    to{
+        color: #c7b9a6;
     }
 }
 

@@ -222,7 +222,7 @@
     left: 0;
     width: 40%;
     border-top-right-radius: 80px;
-    border-bottom: solid 15px #fff;
+    border-bottom: solid 6px #fff;
     border-top: solid 4px #eea2ff;
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
@@ -232,11 +232,11 @@
 
 .line.aq {
     position: absolute;
-    bottom: 331px;
+    bottom: 340px;
     right: 0;
     width: 40%;
     border-bottom-left-radius: 80px;
-    border-top: solid 15px #fff;
+    border-top: solid 6px #fff;
     border-bottom: solid 4px #eea2ff;
     z-index: -1;
     animation-duration: 0.7s;
@@ -389,7 +389,7 @@
         left: 0;
         width: 40%;
         border-top-right-radius: 80px;
-        border-bottom: solid 15px #fff;
+        border-bottom: solid 6px #fff;
         border-top: solid 4px #eea2ff;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -399,11 +399,11 @@
     
     .line.aq {
         position: absolute;
-        bottom: 281px;
+        bottom: 290px;
         right: 0;
         width: 40%;
         border-bottom-left-radius: 80px;
-        border-top: solid 15px #fff;
+        border-top: solid 6px #fff;
         border-bottom: solid 4px #eea2ff;
         z-index: -1;
         animation-duration: 0.7s;
@@ -512,7 +512,7 @@
         left: 0;
         width: 40%;
         border-top-right-radius: 80px;
-        border-bottom: solid 15px #fff;
+        border-bottom: solid 6px #fff;
         border-top: solid 4px #eea2ff;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -522,11 +522,11 @@
     
     .line.aq {
         position: absolute;
-        bottom: 261px;
+        bottom: 270px;
         right: 0;
         width: 40%;
         border-bottom-left-radius: 80px;
-        border-top: solid 15px #fff;
+        border-top: solid 6px #fff;
         border-bottom: solid 4px #eea2ff;
         z-index: -1;
         animation-duration: 0.7s;
@@ -639,14 +639,14 @@
     
     .line.racoon {
         position: absolute;
-        top: 211px;
+        top: 212px;
         z-index: -1;
         bottom: auto;
         left: 0;
         width: 100%;
         border-top-right-radius: 0px;
-        border-top: solid 10px #fff;
-        border-bottom: solid 2px #eea2ff;
+        border-bottom: solid 5px #fff;
+        border-top: solid 3px #eea2ff;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -655,12 +655,12 @@
     
     .line.aq {
         position: absolute;
-        bottom: 265px;
+        bottom: 267px;
         right: 0;
         width: 100%;
         border-bottom-left-radius: 80px;
-        border-bottom: solid 10px #fff;
-        border-top: solid 2px #eea2ff;
+        border-top: solid 5px #fff;
+        border-bottom: solid 3px #eea2ff;
         z-index: -1;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -774,8 +774,8 @@
         left: 0;
         width: 100%;
         border-top-right-radius: 0px;
-        border-top: solid 10px #fff;
-        border-bottom: solid 2px #eea2ff;
+        border-bottom: solid 5px #fff;
+        border-top: solid 3px #eea2ff;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -784,12 +784,12 @@
     
     .line.aq {
         position: absolute;
-        bottom: 293px;
+        bottom: 294px;
         right: 0;
         width: 100%;
         border-bottom-left-radius: 80px;
-        border-bottom: solid 10px #fff;
-        border-top: solid 2px #eea2ff;
+        border-top: solid 5px #fff;
+        border-bottom: solid 3px #eea2ff;
         z-index: -1;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -897,10 +897,14 @@
     
     .line.racoon {
         top: 175px;
+        border-top-width: 2px;
+        border-bottom-width: 4px;
     }
     
     .line.aq {
-        bottom: 303px;
+        bottom: 307px;
+        border-top-width: 4px;
+        border-bottom-width: 2px;
     }
     
     .line.racoon.animate{

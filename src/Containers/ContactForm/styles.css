@@ -36,7 +36,6 @@
     justify-content: center;
     align-items: center;
     width: auto;
-    font-size: 80px;
 }
 
 .contactTitle.animate{
@@ -140,6 +139,7 @@
 .btn p{
     margin: 0px;
     z-index: 1;
+    font-size: 20px;
 }
 
 .btnSpan{
@@ -164,7 +164,7 @@
 .formSpan{
     position: absolute;
     width: 100%;
-    height: 325px;
+    height: 360px;
     background-color: #fff;
     z-index: -1;
     bottom: 0;
@@ -187,5 +187,56 @@
 
     to{
         transform: translateY(0%);
+    }
+}
+
+/*********** 991px MAX-WIDTH ***********/
+
+@media screen and (max-width:991px){
+    .inputStyle .form-label{
+        font-size: 25px;
+    }
+    .inputStyle input{
+        font-size: 18px;
+    }
+}
+
+/*********** 576px MAX-WIDTH ***********/
+
+@media screen and (max-width:576px){
+    .inputsContain{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    
+    .inputStyle .form-label{
+        font-size: 20px;
+    }
+    .inputStyle input{
+        font-size: 16px;
+    }
+}
+
+/*********** 428px MAX-WIDTH ***********/
+
+@media screen and (max-width:428px){
+    .inputsContain{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    
+    .inputStyle .form-label{
+        font-size: 18px;
+    }
+    .inputStyle input{
+        font-size: 14px;
+    }
+
+    .input-group-text{
+        font-size: 18px;
+    }
+
+    .btn p{
+        font-size: 18px;
     }
 }

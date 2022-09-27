@@ -13,7 +13,7 @@ const MyProjects = () => {
         const handleAnimate = () => {
             const { y } = currentRef.getBoundingClientRect();
             const title = document.querySelector('.myProjectsTitle');
-            if (y <= 195) {
+            if (y <= 377) {
                 setAnimate(true);
                 title.classList.add('animate');
                 title.classList.remove('notAnimate');
