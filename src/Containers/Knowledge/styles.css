@@ -7,38 +7,51 @@
     align-items: center;
     padding-top: 60px;
     width: 100%;
-    margin: 200px 0px 200px 0px;
+    margin: 200px 0px 100px 0px;
 }
 
-.knowledgeTitle{
-    align-self: flex-end;
+.knowledge .sectionTitle{
+    padding-bottom: 25px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    margin-right: 50px;
-    font-size: 60px;
-    box-shadow: rgb(165, 134, 169) 0px 0px 4px 1px inset, rgba(255, 255, 255, 0.5) 0px 0px 6px 3px inset;
-    padding: 5px 10px;
-    border-radius: 1px;
-    background-color: #ffffff;
+}
+
+.knowledge .sectionTitle.animate{
+    color: #c7b9a6;
+    animation-name: titleAnimate;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.knowledge .sectionTitle.notAnimate{
+    color: #eea2ff;
+    animation-name: titleNotAnimate;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 .courses{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 700px;
+    width: 100%;
     margin-bottom: 25px;
 }
 
 .course{
     position: relative;
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
+    margin-top: 5px;
+    margin: 7px;
     opacity: 0;
-    background-color: rgba(172, 66, 222);
+    background-color: #fff;
+    border: solid 2px #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -49,6 +62,7 @@
     transition: all 200ms ease-in-out;
     overflow: hidden;
     padding-top: 10px;
+    
 }
 
 .courseContain{
@@ -59,20 +73,20 @@
 }
 
 .courseContain .htmlCss{
-    font-size: 65px;
-    color: #fff;
+    font-size: 60px;
+    color: #82735e;
     transition: all 400ms ease-in-out;
     margin-top: 10px;
 }
 
 .courseContain .jsReact{
-    font-size: 80px;
-    color: #fff;
+    font-size: 70px;
+    color: #82735e;
     transition: all 400ms ease-in-out;
 }
 
 .course h3{
-    color: #fff;
+    color: #82735e;
     font-weight: 600;
     font-size: 12px;
     margin-top: 10px;
@@ -83,9 +97,10 @@
 .courseSpan{
     position: absolute;
     left: -5px;
+    bottom: -5px;
     width: 150%;
     height: 150%;
-    background-color: #fff;
+    background-color: #82735e;
     z-index: -1;
     transform: translateY(100%);
     transition: all 400ms ease-in;
@@ -96,7 +111,7 @@
 }
 
 .course:hover h3,.course:hover .htmlCss,.course:hover .jsReact{
-    color: #000;
+    color: #fff;
 }
 
 .html.animate{
@@ -124,12 +139,21 @@
 }
 
 .selected{
-    background-color: #76d5c6;
-    color: #000;
+    background-color: #c7b9a6;
+    border: solid 2px #c7b9a6;
+    color: #fff;
+}
+
+.selected:hover{
+    border: solid 2px #fff;
+}
+
+.selected h3, .selected svg{
+    color: #fff !important;
 }
 
 .infoContainer{
-    height: 450px;
+    height: 350px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -159,29 +183,31 @@
 
 .info h2{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 900;
     margin: 50px 0 20px 0;
-    color: #fff;
+    color: #82735e;
     align-self: flex-end;
 }
 
 .info p{
     margin-top: 40px;
+    margin-left: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    color: #fff;
+    font-weight: 600;
+    color: #82735e;
 }
 
 .certificate{
     position: relative;
     height: 100%;
-    width: 34%;
+    width: 30%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 110%;
     border-top-right-radius: 90px;
-    border-bottom: solid 5px #76d5c6;
+    border: solid 3px #82735e;
+    filter: sepia(100%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -198,24 +224,24 @@
 }
 
 .bgYellow{
-    height: 540px;
+    height: 380px;
     width: 100%;
-    background-color: #76d5c6;
+    background-color: #c7b9a6;
     position: absolute;
-    top: 287px;
+    top: 331px;
     z-index: -6;
     border-top: solid 1px rgba(89, 84, 10, 0.114);
 }
 
 .bgKnowledge{
-    height: 540px;
+    height: 420px;
     width: 100%;
-    background-color: rgba(71, 19, 95, 0.897);;
+    background-color: #fff;
     position: absolute;
-    border-top-right-radius: 100px;
-    top: 293px;
+    border-top-right-radius: 40px;
+    top: 333px;
     z-index: -5;
-    border-bottom: solid 7px #76d5c6;
+    border-bottom: solid 3px #c7b9a6;
 }
 
 .styleContainer{
@@ -243,6 +269,7 @@
     width: 90px;
     background-color: rgba(255, 255, 255, 0);
     transition: all 100ms ease-in-out;
+    cursor: pointer;
 }
 
 .signo1:hover{
@@ -258,6 +285,7 @@
     width: 90px;
     background-color: rgba(255, 255, 255, 0);
     transition: all 100ms ease-in-out;
+    cursor: pointer;
 }
 
 .signo2:hover{
@@ -278,9 +306,294 @@
 @keyframes infoAnimate {
     from{
         opacity: 0;
-        transform: translateY(10px);
     }
     to{
         opacity: 1;
+    }
+}
+
+@keyframes titleAnimate{
+    from{
+        color: #c7b9a6;
+    }
+    to{
+        color: #eea2ff;
+    }
+}
+
+@keyframes titleNotAnimate{
+    from{
+        color: #eea2ff;
+    }
+    to{
+        color: #c7b9a6;
+    }
+}
+
+/*********** 1200px MAX-WIDTH ***********/
+
+@media screen and (max-width:1200px){
+    .bgKnowledge{
+        top:322px;
+        border-bottom: solid 2px #eea2ff;
+    }
+
+    .bgYellow{
+        top: 320px;
+    }
+
+    .course{
+        height: 115px;
+        width: 115px;
+        margin: 7px;
+    }
+
+    .courseContain .htmlCss {
+        font-size: 50px;
+    }
+
+    .courseContain .jsReact {
+        font-size: 60px;
+    }
+
+    .course h3{
+        font-size: 12px;
+    }
+}
+
+/*********** 991px MAX-WIDTH ***********/
+
+@media screen and (max-width:991px){
+    .bgKnowledge{
+        top:323px;
+        border-bottom: solid 2px #c7b9a6;
+    }
+
+    .bgYellow{
+        top: 321px;
+    }
+
+    .course{
+        height: 115px;
+        width: 115px;
+    }
+
+    .courseContain .htmlCss {
+        font-size: 50px;
+    }
+
+    .courseContain .jsReact {
+        font-size: 60px;
+    }
+
+    .course h3{
+        font-size: 12px;
+    }
+}
+
+/*********** 768px MAX-WIDTH ***********/
+
+@media screen and (max-width:768px){
+    .bgKnowledge{
+        top:290px;
+        border-bottom: solid 2px #c7b9a6;
+    }
+
+    .bgYellow{
+        top: 288px;
+    }
+
+    .course{
+        height: 95px;
+        width: 95px;
+    }
+
+    .courseContain .htmlCss {
+        font-size: 40px;
+    }
+
+    .courseContain .jsReact {
+        font-size: 50px;
+    }
+
+    .course h3{
+        font-size: 10px;
+    }
+
+    .certificate{
+        height: 90%;
+        width: 40%;
+    }
+
+    .info{
+        margin-left: 0px;
+    }
+
+    .signo1{
+        left: 10px;
+        top: 420px;
+        height: 60px;
+        width: 50px;
+    }
+
+    .signo2{
+        right: 10px;
+        top: 420px;
+        height: 60px;
+        width: 50px;
+    }
+}
+
+/*********** 576px MAX-WIDTH ***********/
+
+@media screen and (max-width:576px){
+    .bgKnowledge{
+        top:263px;
+        border-bottom: solid 2px #c7b9a6;
+        height: 475px;
+    }
+
+    .bgYellow{
+        top: 261px;
+    }
+
+    .course{
+        height: 85px;
+        width: 85px;
+    }
+
+    .courseContain .htmlCss {
+        font-size: 30px;
+    }
+
+    .courseContain .jsReact {
+        font-size: 40px;
+    }
+
+    .course h3{
+        font-size: 10px;
+    }
+
+    
+    .infoContainer{
+        flex-direction: column-reverse;
+        padding: 0px 50px;
+        height: 425px;
+    }
+
+    .info{
+        margin-left: 0px;
+        width: 90%;
+        height: auto;
+        padding: 0px;
+    }
+    
+    .info h2{
+        margin: 5px;
+        font-size: 18px;
+    }
+    
+    .info p{
+        margin: 10px;
+        font-size: 14px;
+    }
+    
+    .certificate{
+        height: 100%;
+        width: 80%;
+    }
+
+    .signo1{
+        left: 5px;
+        top: 430px;
+        height: 60px;
+        width: 50px;
+    }
+
+    .signo2{
+        right: 5px;
+        top: 430px;
+        height: 60px;
+        width: 50px;
+    }
+}
+
+/*********** 428px MAX-WIDTH ***********/
+
+@media screen and (max-width:428px){
+    .bgKnowledge{
+        top:218px;
+        border-bottom: solid 2px #c7b9a6;
+        height: 435px;
+    }
+
+    .bgYellow{
+        top: 216px;
+    }
+
+    .course{
+        height: 65px;
+        width: 65px;
+        padding: 0;
+    }
+
+    .courseContain .htmlCss {
+        font-size: 30px;
+        height: 100%;
+        transform: translateY(-5px);
+    }
+
+    .courseContain .jsReact {
+        font-size: 40px;
+        height: 100%;
+    }
+
+    .course h3{
+        height: 0px;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    
+    .infoContainer{
+        flex-direction: column-reverse;
+        padding: 0px 50px;
+        height: 380px;
+    }
+
+    .info{
+        margin-left: 0px;
+        width: 90%;
+        height: auto;
+        padding: 0px;
+    }
+    
+    .info h2{
+        margin: 5px;
+        font-size: 16px;
+    }
+    
+    .info p{
+        margin: 10px;
+        font-size: 12px;
+    }
+    
+    .certificate{
+        height: 100%;
+        width: 80%;
+    }
+
+    .signo1{
+        left: 5px;
+        top: 400px;
+        height: 55px;
+        width: 45px;
+    }
+
+    .signo2{
+        right: 5px;
+        top: 400px;
+        height: 55px;
+        width: 45px;
     }
 }

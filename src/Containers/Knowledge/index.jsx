@@ -9,7 +9,7 @@ const Knowledge = () => {
     const [knowledge, setKnowledge] = useState('HTML-CSS');
 
     const htmlText = "In this course i learned HTML and CSS. I also learned how to use SASS as a preprocessor and bootsrap's library as tools to improve my coding."
-    const jsText = "In this course i learned Javascript's fundamentals and all it's tools making practical work. I got to work with different libraries, using promises, asynchrony and how to apply development techniques for modern apps with AJAX and Fetch."
+    const jsText = "In this course i learned Javascript's fundamentals and all it's tools making practical work. I got to work with different libraries, using promises, asynchrony and learned how to apply development techniques for modern apps with AJAX and Fetch."
     const reactText = "In this course i learned in depth how to use React JS and develop an app by components. I also used Firebase to store different type of information and act as backend."
 
     const changeFw = () => {
@@ -42,12 +42,19 @@ const Knowledge = () => {
             const html = document.querySelector('.html');
             const js = document.querySelector('.js');
             const react = document.querySelector('.react');
+            const title = document.querySelector('.educationTitle')
             if (y <= 530) {
                 html.classList.add('animate');
                 js.classList.add('animate');
                 react.classList.add('animate');
+                title.classList.remove('notAnimate');
+                title.classList.add('animate');
                 document.querySelector('.infoContainer').classList.add('animate');
                 setAnimate(1);
+            }
+            else{
+                title.classList.remove('animate');
+                title.classList.add('notAnimate');
             }
         }
         window.addEventListener('scroll', () => handleAnimate())
@@ -58,24 +65,9 @@ const Knowledge = () => {
 
     }, [animate]);
 
-
-    const el = useRef(null);
-    const typed = useRef(null);
-    const strings = [
-        'Education',
-        'Knowledge'
-    ]
-
-    useEffect(() => {
-        typeAnimate(strings, el, typed);
-    }, []);
-
-
     return (
         <div id='education' ref={knowledgeRef} className='knowledge'>
-            <div className="type-wrap knowledgeTitle">
-                <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
-            </div>
+            <h2 className='sectionTitle educationTitle'>EDUCATION</h2>
             <div className='courses'>
                 <div className={knowledge === 'HTML-CSS' && animate === 1 ? 'course html animate selected' : animate === 1 ? 'course html animate' : 'course html'}
                     onClick={() => setKnowledge('HTML-CSS')}>

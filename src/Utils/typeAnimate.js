@@ -1,15 +1,15 @@
 import React from 'react'
 import Typed from 'typed.js';
 
-const typeAnimate = (strings, el, typed) => {
+const typeAnimate = (strings, el, typed, num) => {
     const options = {
         strings: strings
         ,
-        typeSpeed: 50,
+        typeSpeed: 90,
         backSpeed: 50,
-        loop:true,
         backDelay: 1500,
-        startDelay: 800
+        startDelay: num === 2 ? 1400 : 800,
+        showCursor: false
     };
 
     typed.current = new Typed(el.current, options);

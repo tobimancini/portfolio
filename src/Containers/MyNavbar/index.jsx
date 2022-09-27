@@ -12,24 +12,24 @@ const MyNavbar = () => {
   return (
     <Navbar collapseOnSelect expand="lg">
       <Container>
-        <Navbar.Brand className='logoClass' href="#home">My Portfolio</Navbar.Brand>
+        <Navbar.Brand className='logoClass' href="#mainContainer">tm</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#aboutMe">
-              <p>About Me</p>
+              <p>ABOUT ME</p>
               <span></span>
             </Nav.Link>
             <Nav.Link href="#education">
-              <p>Education</p>
+              <p>EDUCTATION</p>
               <span></span>
             </Nav.Link>
             <Nav.Link href="#myProjects">
-              <p>My Projects</p>
+              <p>MY PROJECTS</p>
               <span></span>
             </Nav.Link>
             <Nav.Link href="#contactForm">
-              <p>Contact</p>
+              <p>CONTACT</p>
               <span></span>
             </Nav.Link>
           </Nav>

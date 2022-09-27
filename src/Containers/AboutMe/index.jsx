@@ -31,33 +31,32 @@ const AboutMe = () => {
 
     }, [animate, animateDisplay]);
 
-    const el = useRef(null);
-    const typed = useRef(null);
-    const strings = [
-        'About Tobias',
-        'About Me'
-    ]
+    // const el = useRef(null);
+    // const typed = useRef(null);
+    // const strings = [
+    //     'About Me'
+    // ]
 
-    useEffect(() => {
-        typeAnimate(strings, el, typed);
-    }, []);
+    // useEffect(() => {
+    //     typeAnimate(strings, el, typed);
+    // }, []);
 
     return (
         <div id='aboutMe' ref={aboutMeRef} className='aboutMe'>
-            <div className={animate === 0 ? 'aboutTitle' : animate === 1 ? 'aboutTitle animate' : 'aboutTitle animateBack'}>
-                <div className="type-wrap typedContain">
-                    <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
+            <h2 className='sectionTitle'>ABOUT ME</h2>
+            <div className='aboutBody'>
+                <div className={animate === 0 ? 'aboutTitle' : animate === 1 ? 'aboutTitle animate' : 'aboutTitle animateBack'}>
+                    <span className={animate === 0 ? 'spanTitle' : animate === 1 ? 'spanTitle animate' : 'spanTitle animateBack'}></span>
                 </div>
-                <span className={animate === 0 ? 'spanTitle' : animate === 1 ? 'spanTitle animate' : 'spanTitle animateBack'}></span>
-            </div>
-            <div className={animate === 0 ? 'aboutList' : animate === 1 ? 'aboutList animate' : 'aboutList animateBack'}>
-                <p>Creative</p>
-                <p>Problem-solving oriented</p>
-                <p>Knwoledge driven</p>
-                <p>Fast learner</p>
-                <p>Great team-Work</p>
-                <span className={animate === 0 ? 'spanList' : animate === 1 ? 'spanList animate' : 'spanList animateBack'}></span>
-                <span className='aboutSpanHover'></span>
+                <div className={animate === 0 ? 'aboutList' : animate === 1 ? 'aboutList animate' : 'aboutList animateBack'}>
+                    <p>Creative</p>
+                    <p>Problem-solving oriented</p>
+                    <p>Knwoledge driven</p>
+                    <p>Fast learner</p>
+                    <p>Great team-Work</p>
+                    <span className={animate === 0 ? 'spanList' : animate === 1 ? 'spanList animate' : 'spanList animateBack'}></span>
+                    {/* <span className='aboutSpanHover'></span> */}
+                </div>
             </div>
         </div>
     )

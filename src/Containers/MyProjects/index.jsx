@@ -12,8 +12,14 @@ const MyProjects = () => {
         const currentRef = projectsRef.current;
         const handleAnimate = () => {
             const { y } = currentRef.getBoundingClientRect();
+            const title = document.querySelector('.myProjectsTitle');
             if (y <= 195) {
                 setAnimate(true);
+                title.classList.add('animate');
+                title.classList.remove('notAnimate');
+            }else{
+                title.classList.remove('animate');
+                title.classList.add('notAnimate');
             }
         }
         window.addEventListener('scroll', () => handleAnimate())
@@ -24,25 +30,10 @@ const MyProjects = () => {
 
     }, [animate]);
 
-
-    const el = useRef(null);
-    const typed = useRef(null);
-    const strings = [
-        'My projects',
-        'My WORK'
-    ]
-
-    useEffect(() => {
-        typeAnimate(strings, el, typed);
-    }, []);
-
     return (
         <div ref={projectsRef} id='myProjects' className='myProjects'>
             <div className='projectsTitle'>
-                <div className="type-wrap typedTitle">
-                    <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
-                </div>
-                <img src="./developApp.png" alt="developing" />
+                <h2 className='sectionTitle myProjectsTitle'>MY PROJECTS</h2>
             </div>
             <div className='projects'>
                 <span className={animate === false ? 'line racoon' : 'line racoon animate'}></span>

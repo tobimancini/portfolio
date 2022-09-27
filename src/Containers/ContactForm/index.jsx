@@ -21,17 +21,6 @@ const ContactForm = () => {
         setValidated(true);
     };
 
-    const el = useRef(null);
-    const typed = useRef(null);
-    const strings = [
-        'Contact Tobias',
-        'Contact Me'
-    ]
-
-    useEffect(() => {
-        typeAnimate(strings, el, typed);
-    }, []);
-
     const [animate, setAnimate] = useState(false);
     const contactRef = useRef();
 
@@ -40,8 +29,14 @@ const ContactForm = () => {
         console.log(contactRef);
         const handleAnimate = () => {
             const { y } = currentRef.getBoundingClientRect();
+            const title = document.querySelector('.contactTitle');
             if (y <= 346) {
                 setAnimate(true);
+                title.classList.add('animate');
+                title.classList.remove('notAnimate');
+            } else {
+                title.classList.add('notAnimate');
+                title.classList.remove('animate');
             }
         }
         window.addEventListener('scroll', () => handleAnimate())
@@ -54,10 +49,14 @@ const ContactForm = () => {
 
     return (
         <div ref={contactRef} id='contactForm' className='contactContainer'>
+            <div className='contactTitleContain'>
+                <h2 className='sectionTitle contactTitle'>CONTACT</h2>
+            </div>
             <Form className='contactForm' noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3 inputsContain">
+                    <span className='inputsSpan'></span>
                     <Form.Group as={Col} className='inputStyle' md="4" controlId="validationCustom01">
-                        <Form.Label>Full name</Form.Label>
+                        <Form.Label>FULL NAME</Form.Label>
                         <Form.Control
                             required
                             type="text"
@@ -66,7 +65,7 @@ const ContactForm = () => {
                         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" className='inputStyle' controlId="validationCustom02">
-                        <Form.Label>E-mail</Form.Label>
+                        <Form.Label>E-MAIL</Form.Label>
                         <Form.Control
                             required
                             type="email"
@@ -75,7 +74,7 @@ const ContactForm = () => {
                         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <InputGroup className='inputStyle'>
-                        <InputGroup.Text>Consult</InputGroup.Text>
+                        <InputGroup.Text>CONSULT</InputGroup.Text>
                         <Form.Control as="textarea" aria-label="With textarea" />
                     </InputGroup>
                     <Button className='inputStyle' type="submit">
@@ -83,14 +82,8 @@ const ContactForm = () => {
                         <span className='btnSpan'></span>
                     </Button>
                 </Row>
-                <div className='contactTitleContain'>
-                    <div className="type-wrap contactTitle">
-                        <span className='typed' style={{ whiteSpace: 'pre' }} ref={el} />
-                    </div>
-                    <div className='contactBird'></div>
-                </div>
             </Form>
-            <span className={animate === false ?'formSpan' : 'formSpan animate'}></span>
+            <span className={animate === false ? 'formSpan' : 'formSpan animate'}></span>
         </div>
     );
 }

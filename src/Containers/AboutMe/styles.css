@@ -1,18 +1,36 @@
 .aboutMe {
     position: relative;
-    height: 400px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0px;
+}
+
+.sectionTitle{
+    color: #eea2ff;
+    font-size: 100px;
+    text-shadow: none;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #fff;
+    margin-bottom: 0px;
+}
+
+.aboutBody{
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 100px 0px;
 }
 
 .aboutTitle {
-    margin-top: 300px;
+    margin-top: 75px;
     position: relative;
-    height: 100%;
+    height: 420px;
     width: 40%;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -21,21 +39,10 @@
     align-items: center;
     border-radius: 3px;
     transform: scaleX(1.1) translateX(-1000px);
-    text-shadow: #524a5b 1px 1px, #5f5a67 0px 0px, #c0b9c7 2px 2px, #ffffff 4px 4px;
+    text-shadow: #524a5b 1px 1px, #5f5a67 0px 0px, #c0b9c7 2px 2px, #efff 4px 4px;
     z-index: 2;
 }
 
-.typedContain{
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(81, 89, 89, 0.549) 0px 0px 4px 2px , rgba(255, 255, 255, 0.5) 0px 0px 3px 1px ;
-    padding: 5px 10px;
-    border-radius: 1px;
-    background-color: #ffffff;
-    width: 320px;
-}
 
 .aboutTitle.animate {
     animation-name: aboutTitle;
@@ -57,11 +64,12 @@
     height: 400px;
     width: 500px;
     z-index: -1;
-    background-image: url(../../../public/pp.png);
+    background-image: url(../../../public/pp2.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     top: 20px;
+    animation-name: nosds !important;
 }
 
 .spanTitle.animate {
@@ -80,22 +88,22 @@
 
 .aboutList {
     position: relative;
-    margin-top: 300px;
-    height: 100%;
+    margin-top: 100px;
+    height: 370px;
     width: 60%;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    background-color: rgb(173, 66, 222);
-    color: rgb(255, 255, 255);
-    font-size: 16px;
+    align-items: flex-end;
+    padding-right: 320px;
+    background-color: #fff;
+    color: #82735e;
     border-radius: 3px;
     border-bottom-left-radius: 260px;
     border-top-left-radius: 260px;
     transform: scaleX(1.1) translateX(1000px);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
     z-index: 1;
     overflow: hidden;
 }
@@ -103,6 +111,7 @@
 .aboutList p{
     z-index: 1;
     transition: all 400ms ease-in-out;
+    font-size: 24px;
 }
 
 .aboutList.animate {
@@ -122,9 +131,10 @@
 .spanList {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 200%;
+    right: -200px;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0.135);
+    background-color: rgba(0, 0, 0, 0.03);
     bottom: 20px;
     border-bottom-left-radius: 260px;
     border-top-left-radius: 260px;
@@ -149,18 +159,14 @@
     left: -5px;
     width: 150%;
     height: 150%;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     z-index: -1;
-    transform: translateY(100%);
+    transform: translateX(100%);
     transition: all 500ms ease-in;
 }
 
 .aboutList:hover .aboutSpanHover{
     transform: translateY(0px);
-}
-
-.aboutList:hover p{
-    color: #000;;
 }
 
 @keyframes aboutTitle {
@@ -256,5 +262,161 @@
     to {
         transform: scaleX(1.1) translateX(1000px);
         opacity: 0;
+    }
+}
+
+/*********** 1200px MAX-WIDTH ***********/
+
+@media screen and (max-width:1200px){
+    .spanTitle{
+        height: 360px;
+        width: 380px;
+    }
+
+    .sectionTitle{
+        font-size: 100px;
+    }
+
+    .aboutList{
+        height: 330px;
+        margin-top: 60px;
+        padding-right: 220px;
+    }
+
+    .aboutList p{
+        font-size: 20px;
+    }
+}
+
+/*********** 991px MAX-WIDTH ***********/
+
+@media screen and (max-width:991px){
+
+    .aboutMe{
+        margin-bottom: 100px;
+        margin-top: 150px;
+    }
+
+    .spanTitle{
+        height: 320px;
+        width: 320px;
+    }
+
+    .sectionTitle{
+        font-size: 100px;
+    }
+
+    .aboutList{
+        height: 300px;
+        margin-top: 25px;
+        padding-right: 180px;
+    }
+
+    .aboutList p{
+        font-size: 18px;
+    }
+}
+
+/*********** 768px MAX-WIDTH ***********/
+
+@media screen and (max-width:768px){
+    
+    .aboutMe{
+        margin-bottom: 70px;
+        margin-top: 50px;
+    }
+
+    .aboutTitle{
+        margin-top: 60px;
+    }
+
+    .aboutList p{
+        font-size: 16px;
+        margin: 3px;
+    }
+
+    .spanTitle{
+        height: 240px;
+        width: 240px;
+        top: 75px;
+    }
+
+    .sectionTitle{
+        font-size: 90px;
+    }
+
+    .aboutList{
+        height: 230px;
+        margin-top: 30px;
+        padding-right: 130px;
+    }
+}
+
+/*********** 576px MAX-WIDTH ***********/
+
+@media screen and (max-width:576px){
+    
+    .aboutMe{
+        margin-bottom: 20px;
+    }
+
+    .aboutTitle{
+        margin-top: 30px;
+    }
+
+    .aboutList p{
+        font-size: 14px;
+        margin: 3px;
+    }
+
+    .spanTitle{
+        height: 200px;
+        width: 200px;
+        top: 95px;
+    }
+
+    .sectionTitle{
+        font-size: 75px;
+    }
+
+    .aboutList{
+        height: 190px;
+        margin-top: 0px;
+        padding-right: 80px;
+    }
+}
+
+/*********** 428px MAX-WIDTH ***********/
+
+@media screen and (max-width:428px){
+    
+    .aboutMe{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    .aboutTitle{
+        margin-top: 30px;
+    }
+
+    .aboutList p{
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    .spanTitle{
+        height: 150px;
+        width: 150px;
+        top: 120px;
+    }
+
+    .sectionTitle{
+        font-size: 58px;
+    }
+
+    .aboutList{
+        height: 140px;
+        margin-top: 0px;
+        padding-right: 50px;
     }
 }
