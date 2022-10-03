@@ -19,7 +19,7 @@
 }
 
 .knowledge .sectionTitle.animate{
-    color: #c7b9a6;
+    color: #c7b9a600;
     animation-name: titleAnimate;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -27,7 +27,7 @@
 }
 
 .knowledge .sectionTitle.notAnimate{
-    color: #eea2ff;
+    color: rgb(13, 41, 96);
     animation-name: titleNotAnimate;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -74,19 +74,19 @@
 
 .courseContain .htmlCss{
     font-size: 60px;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     transition: all 400ms ease-in-out;
     margin-top: 10px;
 }
 
 .courseContain .jsReact{
     font-size: 70px;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     transition: all 400ms ease-in-out;
 }
 
 .course h3{
-    color: #82735e;
+    color: rgb(13, 41, 96);
     font-weight: 600;
     font-size: 12px;
     margin-top: 10px;
@@ -100,7 +100,7 @@
     bottom: -5px;
     width: 150%;
     height: 150%;
-    background-color: #82735e;
+    background-color: rgb(13, 41, 96);
     z-index: -1;
     transform: translateY(100%);
     transition: all 400ms ease-in;
@@ -185,7 +185,7 @@
     font-size: 25px;
     font-weight: 900;
     margin: 50px 0 20px 0;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     align-self: flex-end;
 }
 
@@ -195,7 +195,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color: #82735e;
+    color: rgb(13, 41, 96);
 }
 
 .certificate{
@@ -206,7 +206,7 @@
     background-repeat: no-repeat;
     background-size: auto 110%;
     border-top-right-radius: 90px;
-    border: solid 3px #82735e;
+    border: solid 3px rgb(13, 41, 96);
     filter: sepia(100%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -314,19 +314,19 @@
 
 @keyframes titleAnimate{
     from{
-        color: #c7b9a6;
+        color: #c7b9a600;
     }
     to{
-        color: #eea2ff;
+        color: rgb(13, 41, 96);
     }
 }
 
 @keyframes titleNotAnimate{
     from{
-        color: #eea2ff;
+        color: rgb(13, 41, 96);
     }
     to{
-        color: #c7b9a6;
+        color: #c7b9a600;
     }
 }
 
@@ -335,7 +335,7 @@
 @media screen and (max-width:1200px){
     .bgKnowledge{
         top:322px;
-        border-bottom: solid 2px #eea2ff;
+        border-bottom: solid 2px rgb(13, 41, 96);
     }
 
     .bgYellow{
@@ -477,6 +477,7 @@
     
     .infoContainer{
         flex-direction: column-reverse;
+        justify-content: space-between;
         padding: 0px 50px;
         height: 425px;
     }
@@ -499,7 +500,7 @@
     }
     
     .certificate{
-        height: 100%;
+        height: 250px;
         width: 80%;
     }
 
@@ -579,7 +580,7 @@
     }
     
     .certificate{
-        height: 100%;
+        height: 200px;
         width: 80%;
     }
 

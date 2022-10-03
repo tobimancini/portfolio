@@ -1,16 +1,32 @@
-import React, { useEffect, useRef } from 'react'
-import { useState } from 'react'
-import Typed from 'typed.js';
-import typeAnimate from '../../Utils/typeAnimate';
+import React, { useContext, useState } from 'react';
+import { Tools } from '../../Context';
 import './styles.css'
 
 const MainContainer = () => {
 
     const abroSigno = "<";
-    const cierroSigno = "/>"
+    const cierroSigno = "/>";
+
+    const { time, setTime } = useContext(Tools);
+
+    const [selectTime, setSelectTime] = useState(time);
+
+    const setTimeTheme = setInterval(() => {
+        if (time === "day" || time === "night") {
+            setSelectTime(time);
+            clearInterval(setTimeTheme);
+        }
+    }, 500);
+    
+
+    // const handleTime = (dayOrNight)=>{
+    //     setSelectTime(dayOrNight);
+    //     setTime(dayOrNight);
+    // }
+
 
     return (
-        <div id='mainContainer' className='mainContainer'>
+        <div id='mainContainer' className={time === "day" ? 'mainContainer day' : 'mainContainer night'}>
             <div className='welcomeContainer'>
                 <div className='firstRow'>
                     <div className='welcomeText wel'>{abroSigno}WEL</div>

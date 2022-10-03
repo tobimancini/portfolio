@@ -8,26 +8,24 @@
     position: relative !important;
     top: 0;
     z-index: 999;
-    
-    background-color: #fff !important;
+    background-color: rgba(255, 255, 255, 0) !important;
     width: 100%;
     font-size: 18px;
     font-weight: 800;
     padding: 0px !important;
     min-height: 70px;
-    border-bottom: solid 2px #fff;
 }
 
 
 .logoClass {
-    color: #82735e !important;
+    color: #fff !important;
     font-size: 45px !important;
     font-family: 'Rancho', cursive;
     margin: 0px !important;
     padding: 0px !important;
 }
 
-.me-auto{
+.me-auto {
     margin-right: none !important;
 }
 
@@ -39,17 +37,11 @@
 }
 
 .nav-link {
-    color: #82735e !important;
+    color: #fff !important;
     margin: 5px 3px !important;
     position: relative;
-    border: solid 3px #fff;
     border-radius: 2px;
     transition: all 600ms ease-in !important;
-}
-
-.nav-link:hover{
-    border-bottom: solid 3px #eea2ff;
-    border-top: solid 3px #eea2ff;
 }
 
 .nav-link p {
@@ -58,15 +50,15 @@
     z-index: 1;
 }
 
-.nav-link:hover p{
-    color: #eea2ff;
+.nav-link:hover p {
+    color: #82735e;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     position: relative;
     background-color: #fff !important;
-    color: #82735e !important;
-    border: solid 3px #82735e !important;
+    color: rgb(13, 41, 96) !important;
+    border: solid 3px rgb(13, 41, 96) !important;
     border-radius: 3px !important;
     text-decoration: none;
     width: 40px;
@@ -76,30 +68,125 @@
     align-items: center;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     position: absolute;
     background-image: none !important;
     width: 40% !important;
     height: 40% !important;
-    border-top: solid 3px #82735e;
-    border-bottom: solid 3px #82735e;
+    border-top: solid 3px rgb(13, 41, 96);
+    border-bottom: solid 3px rgb(13, 41, 96);
     transition: all 200ms ease-in-out;
     animation-duration: 700ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 
-.navbar-toggler:hover .navbar-toggler-icon{
+.navbar-toggler:hover .navbar-toggler-icon {
     transform: rotate(90deg);
     height: 60% !important;
 }
 
-/* .navbar-collapse.show{
-    border-top: solid 2px #eea2ff;
-} */
+.dayNight {
+    position: absolute;
+    top: 17px;
+    left: 42%;
+    z-index: 999;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-@media screen and (max-width:992px){
-    .nav-link{
+.dayNight .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.dayNight .night {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.iconContain {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.iconContain.select span {
+    width: 100%;
+}
+
+.iconContain.select .timeIcon {
+    color: rgb(13, 41, 96);
+}
+
+.timeIcon {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 8%;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 300ms ease-in;
+}
+
+.iconContain .left {
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: auto;
+    left: 0px;
+    width: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transition: all 300ms ease-in;
+}
+
+.iconContain .right {
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: 0px;
+    left: auto;
+    width: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transition: all 300ms ease-in;
+}
+
+.iconContain:hover span {
+    width: 100%;
+}
+
+.iconContain:hover .timeIcon {
+    color: rgb(13, 41, 96);
+}
+
+@media screen and (max-width:992px) {
+    .nav-link {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .nav-link {
+        width: 100%;
+    }
+
+    .dayNight{
+        left: 35%;
+        height: 33px;
+        top: 18px;
     }
 }

@@ -3,7 +3,7 @@
 
 .mainContainer {
     position: relative;
-    height: 90vh;
+    height: 91vh;
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -16,6 +16,16 @@
     width: 100%;
     padding: 0px 50px 50px 50px;
     margin-bottom: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.mainContainer.day{
+    background-image: url(/public/Beach.gif);
+}
+
+.mainContainer.night{
+    background-image: url(/public/starfall.gif);
 }
 
 .welcomeContainer {
@@ -25,6 +35,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .firstRow {
@@ -42,7 +53,8 @@
 .welcomeText {
     font-size: 280px;
     font-weight: 900;
-    color: #fff;
+    color: rgb(13, 41, 96);
+    -webkit-text-stroke: 2px #fff;
     height: auto;
     width: auto;
     display: flex;
@@ -63,9 +75,9 @@
     position: absolute;
     font-size: 80px;
     font-family: 'Anton', sans-serif;
-    color: #eea2ff;
+    color: #fff;
     font-weight: 100;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px rgb(13, 41, 96);
     letter-spacing: -2px;
     /* line-height: 90px; */
     /* background-color: #fff; */
@@ -88,7 +100,7 @@
     position: absolute;
     font-size: 65px;
     font-family: 'Anton', sans-serif;
-    color: #c7b9a6;
+    color: #090d49b2;
     font-weight: 100;
     -webkit-text-stroke: 1px #fff;
     letter-spacing: -2px;
@@ -113,11 +125,12 @@
 
 .scrollTxt {
     position: absolute;
-    bottom: 15px;
+    bottom: 45px;
     right: 30px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 3px;
-    color: #82735e;
+    border: solid 1px #fff;
+    color: #fff;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     /* font-style: italic; */
@@ -128,19 +141,6 @@
     /* border: solid 3px rgba(255, 255, 255, 0.866); */
     box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
 }
-
-/* .developerAvatar{
-    position: absolute;
-    right: -180px;
-    top: 0px;
-    width: 45%;
-    z-index: -1;
-    height: 45%;
-    background-image: url(../../../public/developer.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
 
 
 @keyframes enterName {
@@ -257,7 +257,7 @@
 
     .bigName {
         font-size: 55px;
-        top: 340px;
+        top: 80%;
         right: 0;
         left: 0;
         margin: auto;
@@ -266,7 +266,7 @@
 
     .bigSubtitle {
         font-size: 45px;
-        top: 395px;
+        top: 95%;
         right: 0;
         left: 0;
         margin: auto;
@@ -303,7 +303,7 @@
 
     .bigName {
         font-size: 40px;
-        top: 300px;
+        top: 80%;
         right: 0;
         left: 0;
         margin: auto;
@@ -312,7 +312,52 @@
 
     .bigSubtitle {
         font-size: 35px;
-        top: 345px;
+        top: 90%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        letter-spacing: -1px;
+    }
+
+    .scrollTxt {
+        bottom: 100px;
+        font-size: 10px;
+        width: 140px;
+    }
+}
+
+/************ 360px MAX-WIDT ***********/
+
+@media screen and (max-width:360px) {
+    .firstRow {
+        line-height: 80px;
+        margin-bottom: 200px;
+    }
+
+    .welcomeText {
+        font-size: 65px;
+    }
+
+    .wel{
+        align-self: flex-start;
+    }
+
+    .come{
+        align-self: center;
+    }
+
+    .bigName {
+        font-size: 32px;
+        top: 80%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        letter-spacing: -1px;
+    }
+
+    .bigSubtitle {
+        font-size: 28px;
+        top: 90%;
         right: 0;
         left: 0;
         margin: auto;

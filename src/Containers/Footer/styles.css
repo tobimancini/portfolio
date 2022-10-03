@@ -3,7 +3,7 @@
     width: 100%;
     background-color: #fff;
     z-index: 2;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +14,7 @@
 .smTextCont{
     height: 60px;
     width: 90%;
-    border-top: solid 2px #82735e;
+    border-top: solid 2px rgb(13, 41, 96);
     padding-top: 20px;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@
 }
 
 .smText{
-    color: #eea2ff;
+    color: rgb(13, 41, 96);
     font-size: 16px;
     font-weight: 800;
     height: 20px;
@@ -55,14 +55,14 @@
     cursor: pointer;
     border-radius: 6px;
     transition: all 300ms ease-in;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     font-style: none;
     text-decoration: none;
 }
 
 .smLogo:hover{
-    /* color: #eea2ff; */
-    background-color: #eea2ff;
+    /* color: rgb(13, 41, 96); */
+    background-color: rgb(13, 41, 96);
     color: #fff;
 }
 

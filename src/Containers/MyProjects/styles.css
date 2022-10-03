@@ -15,7 +15,7 @@
 }
 
 .myProjectsTitle.notAnimate{
-    color: #eea2ff;
+    color: rgb(13, 41, 96);
     animation-name: titleNotAnimate;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -184,7 +184,7 @@
     z-index: 1;
     font-size: 35px;
     margin-bottom: 10px;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     font-weight: 800;
 }
 
@@ -192,7 +192,7 @@
     z-index: 1;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    color: #82735e;
+    color: rgb(13, 41, 96);
     font-weight: 600;
     transition: all 50ms ease-out;
 }
@@ -200,7 +200,7 @@
 .projectInfo a{
     z-index: 1;
     text-decoration: none !important;
-    color: #82735e !important;
+    color: rgb(13, 41, 96) !important;
     height: 30px;
     font-size: 25px;
     margin-top: 20px;
@@ -209,7 +209,7 @@
 }
 
 .projectInfo a:hover{
-    color: #eea2ff !important;
+    color: rgb(13, 41, 96) !important;
 }
 
 .project:hover .projectInfo{
@@ -223,7 +223,7 @@
     width: 40%;
     border-top-right-radius: 80px;
     border-bottom: solid 6px #fff;
-    border-top: solid 4px #eea2ff;
+    border-top: solid 4px rgb(13, 41, 96);
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -237,7 +237,7 @@
     width: 40%;
     border-bottom-left-radius: 80px;
     border-top: solid 6px #fff;
-    border-bottom: solid 4px #eea2ff;
+    border-bottom: solid 4px rgb(13, 41, 96);
     z-index: -1;
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
@@ -378,7 +378,7 @@
     }
     
     .projectInfo a{
-        color: #82735e !important;
+        color: rgb(13, 41, 96) !important;
         font-size: 25px;
         margin-top: 20px;
     }
@@ -390,7 +390,7 @@
         width: 40%;
         border-top-right-radius: 80px;
         border-bottom: solid 6px #fff;
-        border-top: solid 4px #eea2ff;
+        border-top: solid 4px rgb(13, 41, 96);
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -404,7 +404,7 @@
         width: 40%;
         border-bottom-left-radius: 80px;
         border-top: solid 6px #fff;
-        border-bottom: solid 4px #eea2ff;
+        border-bottom: solid 4px rgb(13, 41, 96);
         z-index: -1;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -501,7 +501,7 @@
     }
     
     .projectInfo a{
-        color: #82735e !important;
+        color: rgb(13, 41, 96) !important;
         font-size: 20px;
         margin-top: 15px;
     }
@@ -513,7 +513,7 @@
         width: 40%;
         border-top-right-radius: 80px;
         border-bottom: solid 6px #fff;
-        border-top: solid 4px #eea2ff;
+        border-top: solid 4px rgb(13, 41, 96);
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -527,7 +527,7 @@
         width: 40%;
         border-bottom-left-radius: 80px;
         border-top: solid 6px #fff;
-        border-bottom: solid 4px #eea2ff;
+        border-bottom: solid 4px rgb(13, 41, 96);
         z-index: -1;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -632,7 +632,7 @@
     }
     
     .projectInfo a{
-        color: #82735e !important;
+        color: rgb(13, 41, 96) !important;
         font-size: 20px;
         margin-top: 15px;
     }
@@ -646,7 +646,7 @@
         width: 100%;
         border-top-right-radius: 0px;
         border-bottom: solid 5px #fff;
-        border-top: solid 3px #eea2ff;
+        border-top: solid 3px rgb(13, 41, 96);
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -660,7 +660,7 @@
         width: 100%;
         border-bottom-left-radius: 80px;
         border-top: solid 5px #fff;
-        border-bottom: solid 3px #eea2ff;
+        border-bottom: solid 3px rgb(13, 41, 96);
         z-index: -1;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -761,7 +761,7 @@
     }
     
     .projectInfo a{
-        color: #82735e !important;
+        color: rgb(13, 41, 96) !important;
         font-size: 18px;
         margin-top: 10px;
     }
@@ -775,7 +775,7 @@
         width: 100%;
         border-top-right-radius: 0px;
         border-bottom: solid 5px #fff;
-        border-top: solid 3px #eea2ff;
+        border-top: solid 3px rgb(13, 41, 96);
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -789,7 +789,7 @@
         width: 100%;
         border-bottom-left-radius: 80px;
         border-top: solid 5px #fff;
-        border-bottom: solid 3px #eea2ff;
+        border-bottom: solid 3px rgb(13, 41, 96);
         z-index: -1;
         animation-duration: 0.7s;
         animation-fill-mode: forwards;
@@ -890,9 +890,120 @@
     }
     
     .projectInfo a{
-        color: #82735e !important;
+        color: rgb(13, 41, 96) !important;
         font-size: 16px;
         margin-top: 5px;
+    }
+    
+    .line.racoon {
+        top: 175px;
+        border-top-width: 2px;
+        border-bottom-width: 4px;
+    }
+    
+    .line.aq {
+        bottom: 307px;
+        border-top-width: 4px;
+        border-bottom-width: 2px;
+    }
+    
+    .line.racoon.animate{
+        animation-name: racoonEnter;
+    }
+    
+    .line.aq.animate{
+        animation-name: aqEnter;
+    }
+    
+    .racoon img {
+        right: 60px;
+        width: 165px;
+        height: 100%;
+        transform: translateX(55px);
+    }
+    
+    .aq img {
+        left: 0;
+        width: 165px;
+        height: 100%;
+    }
+}
+
+/*********** 410px MAX-WIDTH ***********/
+
+@media screen and (max-width:410px){
+    
+    .projectsTitle {
+        margin-bottom: 70px;
+    }
+    
+    .projects{
+        margin-top: 0px;
+        height: 500px;
+    }
+    
+    .projectImg {
+        position: relative;
+        height: 100%;
+        width: 40%;
+        transition: all 400ms ease-in-out;
+        filter: sepia(100%);
+        opacity: 0;
+    }
+    
+    .project.racoon{
+        right: 0px;
+        left: 55%;
+        height: 180px;
+        top: 0px;
+        margin: 0px;
+    }
+    .project.aq{
+        right: 55%;
+        top: 188px;
+        height: 180px;
+        left: 0px;
+        margin: 0px;
+    }
+
+    .project.racoon:hover {
+        right: 0px;
+        left: 0px;
+    }
+    
+    .project.aq:hover {
+        right: 0;
+        left: 0;
+    }
+    
+    .projectInfo{
+        width: 165px;
+        justify-content: center;
+    }
+    
+    .racoon .projectInfo{
+        left: 15px;
+        right: auto;
+    }
+    
+    .aq .projectInfo{
+        right: 15px;
+        left: auto;
+    }
+    
+    .projectInfo h3{
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    
+    .projectInfo p{
+        font-size: 12px;
+    }
+    
+    .projectInfo a{
+        color: rgb(13, 41, 96) !important;
+        font-size: 14px;
+        margin-top: 0px;
     }
     
     .line.racoon {

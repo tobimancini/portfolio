@@ -10,7 +10,7 @@
 }
 
 .sectionTitle{
-    color: #c7b9a6;
+    color: #c7b9a600;
     font-size: 100px;
     text-shadow: none;
     font-weight: 900;
@@ -19,7 +19,7 @@
 }
 
 .aboutMeTitle.animate{
-    color: #c7b9a6;
+    color: #c7b9a600;
     animation-name: titleAnimate;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -27,7 +27,7 @@
 }
 
 .aboutMeTitle.notAnimate{
-    color: #eea2ff;
+    color: rgb(13, 41, 96);
     animation-name: titleNotAnimate;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -114,7 +114,7 @@
     align-items: flex-end;
     padding-right: 320px;
     background-color: #fff;
-    color: #534739;
+    color: rgb(13, 41, 96);
     border-radius: 3px;
     border-bottom-left-radius: 260px;
     border-top-left-radius: 260px;
@@ -194,8 +194,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-top: solid 2px #eea2ff;
-    border-bottom: solid 2px #eea2ff;
+    border-top: solid 2px rgb(13, 41, 96);
+    border-bottom: solid 2px rgb(13, 41, 96);
 }
 
 @keyframes aboutTitle {
@@ -296,19 +296,19 @@
 
 @keyframes titleAnimate{
     from{
-        color: #c7b9a6;
+        color: #c7b9a600;
     }
     to{
-        color: #eea2ff;
+        color: rgb(13, 41, 96);
     }
 }
 
 @keyframes titleNotAnimate{
     from{
-        color: #eea2ff;
+        color: rgb(13, 41, 96);
     }
     to{
-        color: #c7b9a6;
+        color: #c7b9a600;
     }
 }
 
@@ -459,6 +459,41 @@
 
     .sectionTitle{
         font-size: 58px;
+    }
+
+    .aboutList{
+        height: 140px;
+        margin-top: 0px;
+        padding-right: 50px;
+    }
+}
+
+/*********** 360px MAX-WIDTH ***********/
+
+@media screen and (max-width:360px){
+    
+    .aboutMe{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    .aboutTitle{
+        margin-top: 30px;
+    }
+
+    .aboutList p{
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    .spanTitle{
+        height: 150px;
+        width: 150px;
+        top: 120px;
+    }
+
+    .sectionTitle{
+        font-size: 45px;
     }
 
     .aboutList{

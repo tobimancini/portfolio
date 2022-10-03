@@ -45,7 +45,7 @@
 }
 
 .contactTitle.notAnimate{
-    color: #eea2ff;
+    color: rgb(13, 41, 96);
     animation-name: titleNotAnimate;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -128,7 +128,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    background-color: #82735e;
+    background-color: rgb(13, 41, 96);
     border: none;
     font-weight: 800;
     overflow: hidden;
@@ -146,14 +146,16 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #eea2ff;
+    background-color: #c7b9a6;
+    border: solid 2px rgb(13, 41, 96);
     z-index: -1;
     transform: translateY(100%);
-    transition: all 300ms ease-in;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
 }
 
 .inputStyle.btn:hover{
-    background-color: #82735e;
+    background-color: rgb(13, 41, 96);
     color: #fff;
 }
 
@@ -182,7 +184,7 @@
 
 @keyframes formSpan{
     from{
-        transform: translateY(100%);
+        transform: translateY(80%);
     }
 
     to{

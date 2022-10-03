@@ -8,9 +8,9 @@ const Knowledge = () => {
 
     const [knowledge, setKnowledge] = useState('HTML-CSS');
 
-    const htmlText = "In this course i learned HTML and CSS. I also learned how to use SASS as a preprocessor and bootsrap's library as tools to improve my coding."
-    const jsText = "In this course i learned Javascript's fundamentals and all it's tools making practical work. I got to work with different libraries, using promises, asynchrony and learned how to apply development techniques for modern apps with AJAX and Fetch."
-    const reactText = "In this course i learned in depth how to use React JS and develop an app by components. I also used Firebase to store different type of information and act as backend."
+    const htmlText = "In this course I learned HTML and CSS. I also learned how to use SASS as a preprocessor and bootsrap's library as tools to improve my coding."
+    const jsText = "In this course I learned Javascript's fundamentals and all it's tools making practical work. I got to work with different libraries, using promises, asynchrony and learned how to apply development techniques for modern apps with AJAX and Fetch."
+    const reactText = "In this course I learned in depth how to use React JS and develop an app by components. I also used Firebase to store different type of information and act as backend."
 
     const changeFw = () => {
         if (knowledge === 'HTML-CSS') {
